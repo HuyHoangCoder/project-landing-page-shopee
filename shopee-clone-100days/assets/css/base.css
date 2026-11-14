@@ -1,0 +1,96 @@
+/* ./assets/css/base.css */
+
+:root {
+    /* BẢNG MÀU THƯƠNG HIỆU SHOPEE (BRAND COLORS) */
+    --shopee-primary: #ee4d2d;          /* Cam Shopee chủ đạo */
+    --shopee-primary-gradient: linear-gradient(-180deg, #f53d2d, #f63); /* Dải màu cam nền Header */
+    --shopee-primary-light: #ffeee8;    /* Cam nhạt (nền nút Thêm vào giỏ) */
+    --shopee-mall-red: #d0011b;         /* Đỏ Shopee Mall */
+    --shopee-star-gold: #ffce3d;        /* Vàng ngôi sao đánh giá */
+
+    /* BẢNG MÀU TRUNG TÍNH (NEUTRAL COLORS) */
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --text-primary: rgba(0, 0, 0, 0.87);   /* Màu chữ chính (Đen dịu mắt) */
+    --text-secondary: rgba(0, 0, 0, 0.54); /* Màu chữ phụ (Đã bán, địa điểm) */
+    --bg-body: #f5f5f5;                    /* Màu nền xám nhạt toàn trang của Shopee */
+    --border-color: rgba(0, 0, 0, 0.09);   /* Màu viền mảnh giữa các ô */
+
+    /* KÍCH THƯỚC KHUNG GIAO DIỆN (LAYOUT DIMENSIONS) */
+    --container-width: 1200px;          /* Chiều rộng chuẩn của khung nội dung Shopee PC */
+    --header-height: 120px;             /* Tổng chiều cao Header */
+    --navbar-height: 34px;              /* Chiều cao thanh Topbar */
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+
+      /* HỆ THỐNG PHÂN TẦNG CHIỀU SÂU (Z-INDEX SCALE) */
+    --z-negative: -1;
+    --z-elevate: 1;         /* Nhãn Yêu thích, Badge giảm giá trên thẻ sản phẩm */
+    --z-sticky: 100;        /* Thanh Header bám dính khi cuộn trang */
+    --z-dropdown: 200;      /* Hộp QR, Thông báo, Lịch sử tìm kiếm, Giỏ hàng */
+    --z-fixed-widget: 300;  /* Khung Chat mini góc dưới màn hình */
+    --z-modal: 1000;        /* Popup Đăng nhập / Quảng cáo phủ toàn màn hình */
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.4rem; /* Trả cỡ chữ mặc định của trang về 14px chuẩn Shopee */
+    color: var(--text-primary);
+    background-color: var(--bg-body);
+}
+
+/* Class dùng chung để căn giữa nội dung trong khung 1200px */
+.grid-container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto; /* Căn giữa khối ra chính giữa màn hình */
+}
+
+
+/* Hiệu ứng chuyển động hiện dần mượt mà dùng chung toàn trang */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Bổ sung vào cuối file ./assets/css/base.css */
+
+/* --- COMPONENT NÚT BẤM DÙNG CHUNG (BUTTON) --- */
+.btn {
+    min-width: 12.4rem;
+    height: 3.4rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0 1.2rem;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    background-color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--shopee-primary);
+}
+
+.btn.btn--primary:hover {
+    background-color: #fb6445;
+}
+

@@ -1,0 +1,905 @@
+/* ./assets/css/main.css */
+
+.shopee-header {
+    height: var(--header-height);
+    background-image: var(--shopee-primary-gradient);
+    color: var(--white-color);
+    
+    /* KÍCH HOẠT STICKY HEADER BÁM DÍNH ĐỈNH MÀN HÌNH */
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-sticky);                   /* Tầng 100: Luôn nổi trên toàn bộ nội dung thân trang */
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12); /* Tạo bóng đổ nhẹ dưới đáy Header khi cuộn qua nền trắng */
+}
+
+/* ./assets/css/main.css */
+
+/* --- KHU VỰC TOP NAVBAR --- */
+.top-navbar {
+    height: var(--navbar-height); /* 34px đã khai báo ở base.css */
+    display: flex;
+    justify-content: space-between; /* Đẩy 2 thẻ <ul> ra 2 đầu trái - phải */
+    align-items: center;            /* Căn giữa theo chiều dọc */
+}
+
+.nav-list {
+    display: flex;                  /* Giúp các thẻ <li> bên trong xếp thành hàng ngang */
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;             /* Làm gốc tọa độ cho vạch ngăn cách ::after */
+    margin: 0 0.8rem;               /* Tạo khoảng cách 8px trái/phải giữa các mục */
+}
+
+/* Xóa khoảng cách thừa ở mục đầu tiên bên trái và mục cuối cùng bên phải */
+.nav-list:first-child .nav-item:first-child {
+    margin-left: 0;
+}
+
+.nav-list:last-child .nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-link,
+.nav-title-no-pointer {
+    font-size: 1.3rem;              /* Cỡ chữ 13px chuẩn Topbar Shopee */
+    color: var(--white-color);
+    font-weight: 300;               /* Nét chữ mảnh, thanh thoát */
+    transition: opacity 0.2s ease;  /* Tạo hiệu ứng mờ dần mượt mà khi di chuột */
+}
+
+/* Hiệu ứng mờ đi khi di chuột vào link (trừ chữ "Kết nối") */
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* In đậm cho nút Đăng Ký / Đăng Nhập */
+.nav-link--strong {
+    font-weight: 500;
+}
+
+/* Chữ "Kết nối" chỉ là nhãn văn bản, không cho phép bấm vào */
+.nav-title-no-pointer {
+    cursor: text;
+}
+
+/* TUYỆT CHIÊU: Vẽ vạch ngăn cách dọc bằng Pseudo-element ::after */
+.nav-item--separate::after {
+    content: "";                    /* Bắt buộc phải có thuộc tính content thì ::after mới hiện */
+    display: block;
+    position: absolute;
+    width: 1px;                     /* Độ dày vạch 1px */
+    height: 1.2rem;                 /* Chiều cao vạch 12px */
+    background-color: hsla(0, 0%, 100%, 0.22); /* Màu trắng trong suốt 22% chuẩn Shopee */
+    right: -0.9rem;                 /* Đẩy vạch ra giữa khe hở của 2 thẻ <li> */
+    top: 50%;                       /* Đưa đỉnh của vạch xuống chính giữa (50%) chiều cao thẻ <li> */
+    transform: translateY(-50%);    /* Kéo ngược vạch lên 50% chiều cao của chính nó để căn tâm tuyệt đối */
+}
+
+
+.shopee-container {
+    padding-top: 3rem;   /* 30px */
+    padding-bottom: 5rem; /* 50px */
+}
+
+/* Tạo hiệu ứng khung trắng cho các khối nội dung trên nền xám #f5f5f5 */
+.category-section,
+.flash-sale-section,
+.daily-discover-section {
+    background-color: var(--white-color);
+    margin-top: 1.5rem;  /* 15px */
+    padding: 2rem;       /* 20px */
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Bổ sung vào ./assets/css/main.css */
+
+/* Căn chỉnh cho thẻ .nav-item và .nav-link để chữ và icon nằm thẳng tâm ngang */
+.nav-item,
+.nav-link,
+.nav-icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Khoảng cách và kích thước chuẩn cho các Icon trên Topbar */
+.nav-icon-link {
+    color: var(--white-color);
+    transition: opacity 0.2s ease;
+}
+
+.nav-icon-link:hover {
+    opacity: 0.7;
+}
+
+/* Tạo khoảng cách nhỏ giữa chữ "Kết nối" và icon Facebook đầu tiên */
+.nav-title-no-pointer {
+    margin-right: 0.4rem;
+}
+
+.nav-icon {
+    font-size: 1.6rem;   /* Icon to 16px (lớn hơn chữ 13px một chút để cân đối thị giác) */
+    margin: 0 0.4rem;    /* Cách đều trái phải 4px */
+}
+
+/* --- KHU VỰC HỘP THOẠI QR CODE (HEADER QR POPOVER) --- */
+.header-qr {
+    width: 18.6rem;                 /* Rộng 186px chuẩn Shopee */
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.8rem);       /* Đẩy xuống dưới đáy thẻ <li> một khoảng 8px */
+    padding: 0.8rem;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    z-index: 10;                    /* Đảm bảo hộp QR luôn nổi đè lên thanh Tìm kiếm bên dưới */
+    display: none;                  /* Mặc định ẩn đi */
+    animation: fadeIn ease-in 0.2s; /* Kích hoạt hiệu ứng hiện dần trong 0.2 giây */
+     z-index: var(--z-dropdown);
+}
+
+/* TUYỆT CHIÊU: Tạo "Cầu nối vô hình" lấp đầy khe hở 8px để không bị mất Hover */
+.header-qr::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1.6rem;                 /* Cao 16px, dư sức che kín khe hở 8px */
+    left: 0;
+    top: -1.2rem;                   /* Đẩy ngược lên phía trên hộp QR */
+    /* Mẹo debug: Hãy thử bỏ comment dòng background bên dưới để nhìn thấy cây cầu! */
+    /* background-color: rgba(255, 0, 0, 0.4); */
+}
+
+/* Khi rê chuột vào thẻ <li> có class .nav-item--has-qr -> Hiện hộp .header-qr bên trong nó */
+.nav-item--has-qr:hover .header-qr {
+    display: block;
+}
+
+.header-qr-img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+/* Chia lưới 2 cột cho các nút tải App Store / Google Play / AppGallery */
+.header-qr-apps {
+    display: flex;
+    flex-wrap: wrap;                /* Cho phép rớt xuống hàng thứ 2 khi hết chỗ */
+    justify-content: space-between;
+    margin-top: 0.6rem;
+    padding: 0 0.4rem;
+}
+
+.header-qr-link {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.header-qr-link:hover {
+    color: var(--shopee-primary);
+}
+
+/* ./assets/css/main.css */
+
+/* --- KHU VỰC HỘP THOẠI THÔNG BÁO (NOTIFICATION DROPDOWN) --- */
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header-notify {
+    position: absolute;
+    top: calc(100% + 0.8rem);       /* Cách đáy chữ Thông Báo 8px */
+    right: 0;                       /* Căn sát mép phải của thẻ <li> Thông Báo */
+    width: 40.4rem;                 /* Chiều rộng chuẩn Shopee: 404px */
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    cursor: default;                /* Tránh việc con trỏ chuột biến thành bàn tay ở vùng trắng */
+    user-select: none;              /* Không cho bôi đen văn bản thông báo */
+    
+    /* Thiết lập tâm phóng to từ góc trên bên phải và chạy Animation */
+    transform-origin: calc(100% - 3.2rem) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    will-change: opacity, transform;
+    display: none;                  /* Mặc định ẩn */
+    z-index: var(--z-dropdown);
+}
+
+/* KÍCH HOẠT HIỂN THỊ KHI HOVER VÀO THẺ <LI> */
+.nav-item--has-notify:hover .header-notify {
+    display: block;
+}
+
+/* 1. DÙNG ::BEFORE VẼ MŨI TÊN TAM GIÁC NHỌN CHỈ LÊN TRÊN */
+.header-notify::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 1.2rem;                  /* Căn chỉnh mũi tên nằm ngay dưới chữ Thông Báo */
+    top: -2.8rem;                   /* Đẩy mũi tên trồi lên trên nắp hộp */
+    border-width: 2rem 2.6rem;      /* Tạo tam giác bè (Cao 20px, Rộng 26px) */
+    border-style: solid;
+    /* Chỉ giữ lại màu trắng ở cạnh Bottom, 3 cạnh còn lại trong suốt */
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+/* 2. DÙNG ::AFTER LÀM "CẦU NỐI VÔ HÌNH" CHỐNG MẤT HOVER */
+.header-notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -1.4rem;
+    width: 9rem;                    /* Đủ rộng để phủ kín chữ Thông Báo */
+    height: 1.6rem;                 /* Lấp đầy khe hở 8px */
+}
+
+/* Tiêu đề: "Thông Báo Mới Nhận" */
+.header-notify-header {
+    height: 4rem;
+    background-color: var(--white-color);
+}
+
+.header-notify-header h3 {
+    color: var(--text-secondary);
+    margin: 0 0 0 1.2rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 4rem;              /* Căn giữa dọc đơn giản bằng cách cho line-height = height */
+}
+
+/* Danh sách các item thông báo */
+.header-notify-list {
+    padding-left: 0;
+}
+
+.header-notify-item {
+    background-color: var(--white-color);
+    transition: background-color 0.15s ease;
+}
+
+/* Màu nền cam phấn nhạt đặc trưng cho thông báo CHƯA ĐỌC */
+.header-notify-item--unread {
+    background-color: rgba(238, 77, 45, 0.08);
+}
+
+/* Khi rê chuột vào từng thông báo -> Đổi sang nền xám nhạt */
+.header-notify-item:hover {
+    background-color: #f8f8f8;
+}
+
+.header-notify-link {
+    display: flex;
+    align-items: flex-start;        /* Căn ảnh và chữ bám sát mép trên */
+    padding: 1.2rem;
+    width: 100%;
+}
+
+.header-notify-img {
+    width: 4.8rem;                  /* Rộng 48px */
+    height: 4.8rem;                 /* Cao 48px */
+    object-fit: cover;              /* Giúp ảnh không bao giờ bị méo tỷ lệ */
+    flex-shrink: 0;                 /* Bắt buộc: Không cho Flexbox bóp méo chiều rộng của ảnh khi chữ quá dài */
+    border: 1px solid var(--border-color);
+}
+
+.header-notify-info {
+    margin-left: 1.2rem;
+    flex: 1;
+}
+
+.header-notify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    font-weight: 400;
+    line-height: 1.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.header-notify-desc {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6rem;
+}
+
+/* Chân hộp thông báo: Nút "Xem tất cả" */
+.header-notify-footer {
+    display: flex;
+    background-color: var(--white-color);
+}
+
+.header-notify-footer-btn {
+    color: var(--text-primary);
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    transition: background-color 0.15s ease;
+}
+
+.header-notify-footer-btn:hover {
+    background-color: #fafafa;
+    color: var(--shopee-primary);
+}
+
+/* ./assets/css/main.css */
+
+/* --- KHU VỰC HEADER WITH SEARCH --- */
+.header-with-search {
+    height: var(--header-with-search-height); /* 86px tự động tính bằng calc() ở Bài 02 */
+    display: flex;
+    align-items: center;
+    padding: 0 0.8rem;
+}
+
+/* 1. Khối Logo Shopee */
+.header-logo {
+    width: 20rem;                   /* Rộng 200px chuẩn Shopee */
+    flex-shrink: 0;
+}
+
+.header-logo-link {
+    display: inline-block;
+    color: var(--white-color);      /* Truyền màu trắng vào thuộc tính fill="currentColor" của SVG */
+}
+
+.header-logo-svg {
+    width: 15rem;                   /* Rộng 150px */
+    height: 5rem;
+}
+
+/* 2. Khối Tìm kiếm trung tâm (Chiếm toàn bộ khoảng trống ở giữa bằng flex: 1) */
+.header-search-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;         /* Xếp chồng dọc: Thanh Search ở trên, Từ khóa gợi ý ở dưới */
+    margin-top: 1.2rem;             /* Đẩy nhẹ xuống để cân đối thị giác */
+}
+
+.header-search {
+    height: 4rem;                   /* Chiều cao thanh tìm kiếm chuẩn 40px */
+    background-color: var(--white-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;                /* Tạo khoảng đệm trắng 3px bọc quanh nút Tìm kiếm màu cam */
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Thẻ bọc ô Input và Lịch sử tìm kiếm */
+.header-search-input-wrap {
+    flex: 1;                        /* Ô input chiếm trọn chiều ngang còn lại của thanh trắng */
+    height: 100%;
+    position: relative;             /* Làm gốc tọa độ cho hộp Lịch sử tìm kiếm */
+}
+
+.header-search-input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    padding: 0 1.2rem;
+    border-radius: 2px;
+}
+
+/* Nút bấm kính lúp màu cam */
+.header-search-btn {
+    background-color: var(--shopee-primary);
+    height: 3.4rem;                 /* Cao 34px (Nhỏ hơn khung trắng 40px đúng 6px = 3px trên + 3px dưới) */
+    width: 6rem;                    /* Rộng 60px */
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease;
+}
+
+.header-search-btn:hover {
+    background-color: #fb6445;      /* Sáng lên nhẹ nhàng khi rê chuột vào nút tìm kiếm */
+}
+
+.header-search-btn-icon {
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+/* --- HỘP LỊCH SỬ TÌM KIẾM (SEARCH HISTORY DROPDOWN) --- */
+.header-search-history {
+    position: absolute;
+    top: calc(100% + 0.6rem);       /* Nằm cách đáy thanh tìm kiếm 6px */
+    left: -0.3rem;                  /* Bù lại 3px padding của .header-search để thẳng mép trái tuyệt đối */
+    width: calc(100% - 1.6rem);     /* Ngắn hơn ô input một chút giống giao diện Shopee thật */
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(189, 189, 189, 0.5);
+    overflow: hidden;               /* Cắt gọn các góc của thẻ <li> bên trong theo border-radius 2px */
+    z-index: 9;
+    display: none;                  /* Mặc định ẩn */
+    z-index: var(--z-dropdown);
+}
+
+/* BÍ THUẬT: Khi bấm chuột vào ô input (:focus), hiện hộp lịch sử đứng sau nó (~) */
+.header-search-input:focus ~ .header-search-history {
+    display: block;
+}
+
+.header-search-history-heading {
+    margin: 0.8rem 1.2rem;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.26);     /* Màu chữ xám mờ cho tiêu đề Lịch sử */
+    font-weight: 400;
+}
+
+.header-search-history-list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.header-search-history-item {
+    height: 3.8rem;                 /* Cao 38px mỗi dòng lịch sử */
+    padding: 0 1.2rem;
+    transition: background-color 0.1s ease;
+}
+
+.header-search-history-item:hover {
+    background-color: #fafafa;
+}
+
+.header-search-history-item a {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    line-height: 3.8rem;
+    display: block;                 /* Mở rộng vùng bấm ra toàn bộ chiều ngang của dòng */
+}
+
+/* --- DÃY TỪ KHÓA HOT TREND BÊN DƯỚI THANH SEARCH --- */
+.header-search-suggest-list {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;                    /* Khoảng cách 14px giữa các từ khóa */
+    margin-top: 0.6rem;
+    height: 1.8rem;
+    overflow: hidden;               /* Ẩn bớt nếu danh sách từ khóa quá dài */
+}
+
+.header-search-suggest-item {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    white-space: nowrap;            /* Không cho từ khóa bị gãy làm 2 dòng */
+}
+
+.header-search-suggest-item:hover {
+    color: var(--white-color);
+}
+
+/* 3. Khối Giỏ hàng bên phải */
+.header-cart {
+    width: 15rem;                   /* Rộng 150px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-cart-wrap {
+    position: relative;
+    padding: 0 1.2rem;
+    cursor: pointer;
+}
+
+.header-cart-icon {
+    font-size: 2.4rem;              /* Icon xe đẩy hàng to 24px */
+    color: var(--white-color);
+}
+
+/* Con số thông báo số lượng sản phẩm trên góc xe đẩy */
+.header-cart-notice {
+    position: absolute;
+    top: -0.8rem;
+    right: -0.2rem;
+    padding: 0.1rem 0.6rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    border-radius: 1rem;            /* Bo tròn thành hình viên thuốc (Pill badge) */
+    border: 2px solid var(--shopee-primary); /* Viền cam tạo khoảng tách biệt với xe đẩy trắng */
+    color: var(--shopee-primary);
+    background-color: var(--white-color);
+    font-weight: 500;
+}
+
+/* Bổ sung vào cuối file ./assets/css/main.css */
+
+/* --- HỘP THOẠI GIỎ HÀNG MINI (MINI CART POPOVER) --- */
+.header-cart-list {
+    position: absolute;
+    top: calc(100% + 1rem);         /* Cách đáy icon xe đẩy 10px */
+    right: -0.2rem;
+    background-color: var(--white-color);
+    width: 40rem;                   /* Rộng 400px chuẩn Shopee */
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+    cursor: default;
+    z-index: 10;
+    
+    /* Tái sử dụng animation nở ra từ góc phải giống hộp Thông Báo ở Bài 05 */
+    transform-origin: calc(100% - 2rem) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    will-change: opacity, transform;
+    display: none;                  /* Mặc định ẩn */
+    z-index: var(--z-dropdown);
+}
+
+/* Khi rê chuột vào vùng bọc xe đẩy -> Hiện hộp thoại Giỏ hàng */
+.header-cart-wrap:hover .header-cart-list {
+    display: block;
+}
+
+/* Vẽ mũi tên tam giác nhọn chỉ thẳng vào xe đẩy + Cầu nối chống mất Hover */
+.header-cart-list::before {
+    content: "";
+    position: absolute;
+    right: 0.6rem;
+    top: -2.6rem;
+    border-width: 1.6rem 2rem;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    cursor: pointer;
+}
+
+/* Cầu nối vô hình lấp khe hở 10px */
+.header-cart-list::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -1.4rem;
+    width: 6rem;
+    height: 1.6rem;
+}
+
+/* --- XỬ LÝ TRẠNG THÁI 1: GIỎ HÀNG TRỐNG (--no-cart) --- */
+.header-cart-no-cart-img,
+.header-cart-list-no-cart-msg {
+    display: none;                  /* Mặc định ẩn khi giỏ đang có hàng */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-cart-no-cart-img {
+    width: 55%;
+}
+
+.header-cart-list-no-cart-msg {
+    font-size: 1.4rem;
+    margin-top: 1.4rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* KHI GẮN CLASS --no-cart VÀO: Hiện ảnh trống & Ẩn danh sách sản phẩm */
+.header-cart-list--no-cart {
+    padding: 2.8rem 0;
+}
+
+.header-cart-list--no-cart .header-cart-no-cart-img,
+.header-cart-list--no-cart .header-cart-list-no-cart-msg {
+    display: block;
+}
+
+.header-cart-list--no-cart .header-cart-heading,
+.header-cart-list--no-cart .header-cart-list-item,
+.header-cart-list--no-cart .header-cart-footer {
+    display: none;
+}
+
+/* --- XỬ LÝ TRẠNG THÁI 2: GIỎ HÀNG CÓ SẢN PHẨM --- */
+.header-cart-heading {
+    text-align: left;
+    margin: 1.2rem 0 0.8rem 1.2rem;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.26);
+    font-weight: 400;
+}
+
+.header-cart-list-item {
+    padding-left: 0;
+    list-style: none;
+    max-height: 45vh;               /* Giới hạn chiều cao tối đa 45% màn hình, nhiều hơn sẽ tự có thanh cuộn! */
+    overflow-y: auto;
+}
+
+.header-cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    transition: background-color 0.1s ease;
+}
+
+.header-cart-item:hover {
+    background-color: #f8f8f8;
+}
+
+.header-cart-img {
+    width: 4.2rem;
+    height: 4.2rem;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.header-cart-item-info {
+    flex: 1;
+    margin-left: 1.2rem;
+    min-width: 0;                   /* BẮT BUỘC để text-overflow: ellipsis bên trong hoạt động! */
+}
+
+/* Dòng 1: Tên sản phẩm (Trái) + Giá tiền x Số lượng (Phải) */
+.header-cart-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+}
+
+.header-cart-item-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0;
+    flex: 1;
+    padding-right: 1.6rem;
+    
+    /* Bộ 3 thuộc tính cắt chữ dài thành dấu "..." */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-cart-item-price-wrap {
+    flex-shrink: 0;                 /* Giữ cụm giá tiền không bao giờ bị ép rớt dòng */
+}
+
+.header-cart-item-price {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--shopee-primary);
+}
+
+.header-cart-item-multiply {
+    font-size: 0.9rem;
+    margin: 0 0.4rem;
+    color: var(--text-secondary);
+}
+
+.header-cart-item-qnt {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Dòng 2: Phân loại hàng (Trái) + Nút Xóa (Phải) */
+.header-cart-item-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-cart-item-description {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.header-cart-item-remove {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header-cart-item-remove:hover {
+    color: var(--shopee-primary);
+}
+
+/* Chân hộp giỏ hàng */
+.header-cart-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+    background-color: #fdfdfd;
+}
+
+.header-cart-footer-msg {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.hero-banner-section,
+.category-section,
+.flash-sale-section,
+.daily-discover-section {
+    background-color: var(--white-color);
+    margin-top: 1.5rem;
+    padding: 2rem;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    min-height: 35rem;              /* Mỗi khối cao tối thiểu 350px để trang dài ra > 1500px */
+    position: relative;             /* Giả lập các khối bên dưới đều có định vị relative */
+    z-index: var(--z-elevate);      /* Tầng 1: Thấp hơn tầng 100 của Header */
+}
+
+/* ./assets/css/main.css */
+
+/* --- CHƯƠNG 2: KHU VỰC HERO BANNER (CSS GRID LAYOUT) --- */
+
+/* Dải nền trắng trải rộng toàn màn hình dưới đáy Header */
+.hero-section-wrapper {
+    background-color: var(--white-color);
+    padding-top: 3rem;              /* Cách đáy Header 30px chuẩn Shopee */
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Khung lưới CSS Grid 2 chiều */
+.hero-banner-grid {
+    display: grid;
+    /* Chia 2 cột: Cột trái 2 phần (2fr), Cột phải 1 phần (1fr) */
+    grid-template-columns: 2fr 1fr;
+    /* Chia 2 dòng có chiều cao bằng nhau (mỗi dòng 115px -> Tổng cao 235px tính cả gap) */
+    grid-template-rows: 11.5rem 11.5rem;
+    /* Khe hở giữa các ô (cả ngang lẫn dọc) đúng 5px */
+    gap: 0.5rem;
+}
+
+/* Ô Banner lớn bên trái: Gộp 2 dòng dọc (Từ Line 1 đến Line 3) */
+.hero-banner-main {
+    grid-column: 1 / 2;             /* Nằm ở cột 1 */
+    grid-row: 1 / 3;                /* Hoặc viết: grid-row: span 2; */
+    border-radius: 2px;
+    overflow: hidden;               /* Cắt gọn góc ảnh theo border-radius 2px */
+    position: relative;             /* Làm gốc tọa độ cho các nút điều hướng Slider ở Bài 10 */
+}
+
+/* Hai ô Banner nhỏ bên phải: Tự động lấp vào 2 ô trống còn lại ở Cột 2 */
+.hero-banner-sub {
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.hero-banner-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ép ảnh luôn lấp đầy 100% diện tích ô Grid mà không bao giờ bị biến dạng */
+.hero-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;              /* Tự động căn tâm và cắt phần thừa nếu ảnh sai tỷ lệ */
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng phóng nhẹ sang trọng khi rê chuột vào 2 banner nhỏ bên phải */
+.hero-banner-sub:hover .hero-banner-img {
+    transform: scale(1.02);
+}
+
+/* --- KHU VỰC CÁC SECTION THÂN TRANG TRÊN NỀN XÁM --- */
+.shopee-container {
+    padding-top: 0.5rem;
+    padding-bottom: 5rem;
+}
+
+.category-section,
+.flash-sale-section,
+.daily-discover-section {
+    background-color: var(--white-color);
+    margin-top: 1.5rem;
+    padding: 2rem;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    min-height: 35rem;
+    position: relative;
+    z-index: var(--z-elevate);
+}
+
+/* Bổ sung vào ./assets/css/main.css */
+
+/* --- NÚT MŨI TÊN ĐIỀU HƯỚNG SLIDER (PREV / NEXT BUTTONS) --- */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    /* Căn nút nằm chính giữa chiều dọc của Banner */
+    width: 3.5rem;                  /* Rộng 35px chuẩn Shopee */
+    height: 6rem;                   /* Cao 60px (Hình chữ nhật đứng) */
+    background-color: rgba(0, 0, 0, 0.18); /* Màu đen bán trong suốt nhẹ nhàng */
+    color: var(--white-color);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-elevate);      /* Nổi lên trên mặt tấm ảnh */
+    
+    /* Mặc định tàng hình, chuyển động mượt trong 0.25 giây */
+    opacity: 0;
+    transition: opacity 0.25s ease, background-color 0.2s ease;
+}
+
+/* Nút Prev: Bám sát mép trái, chỉ bo tròn 2 góc bên phải */
+.slider-btn--prev {
+    left: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+/* Nút Next: Bám sát mép phải, chỉ bo tròn 2 góc bên trái */
+.slider-btn--next {
+    right: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+/* KHI RÊ CHUỘT VÀO KHUNG BANNER LỚN -> HIỆN CẢ 2 NÚT MŨI TÊN */
+.hero-banner-main:hover .slider-btn {
+    opacity: 1;
+}
+
+/* KHI RÊ CHUỘT TRỰC TIẾP VÀO NÚT MŨI TÊN -> NỀN ĐEN ĐẬM LÊN RÕ RỆT */
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+/* --- DÃY CHẤM TRÒN PHÂN TRANG (PAGINATION DOTS) --- */
+.slider-dots {
+    position: absolute;
+    bottom: 1.2rem;                 /* Cách đáy Banner 12px */
+    left: 50%;                      /* Đưa mép trái của dãy chấm vào giữa Banner */
+    transform: translateX(-50%);    /* Kéo lùi lại 50% chiều rộng của chính dãy chấm để căn tâm ngang tuyệt đối */
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;                    /* Khoảng cách 8px giữa các chấm tròn */
+    z-index: var(--z-elevate);
+}
+
+.slider-dot {
+    width: 1rem;                    /* Đường kính chấm tròn 10px */
+    height: 1rem;
+    border-radius: 50%;             /* Biến hình vuông thành hình tròn tuyệt đối */
+    background-color: hsla(0, 0%, 100%, 0.4); /* Màu trắng mờ 40% */
+    border: 1px solid hsla(0, 0%, 53.7%, 0.4); /* Viền xám mảnh giúp chấm tròn vẫn nhìn rõ nếu gặp ảnh nền màu trắng */
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Trạng thái chấm tròn đang được chọn (Active) hoặc khi rê chuột vào */
+.slider-dot--active,
+.slider-dot:hover {
+    background-color: var(--shopee-primary); /* Đổi sang màu Cam Shopee #ee4d2d */
+    border-color: var(--shopee-primary);
+}
+

@@ -1,0 +1,46 @@
+/* ./assets/css/reset.css */
+
+/* 1. Áp dụng border-box cho toàn bộ phần tử và pseudo-elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Xóa dấu chấm đầu dòng của các danh sách */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 3. Xóa gạch chân mặc định của thẻ link và kế thừa màu chữ */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 4. Giúp hình ảnh không bị tràn khỏi khung chứa */
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 5. Đồng bộ font chữ cho các thẻ form (vì mặc định input/button không nhận font của body) */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+}
+

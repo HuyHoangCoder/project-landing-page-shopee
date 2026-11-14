@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Việt Nam | Mua và Bán Trên Ứng Dụng Di Động Hoặc Website</title>
+
+    <!-- 1. Nhúng Google Fonts: Roboto (Độ đậm 300, 400, 500, 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- 2. Nhúng thư viện Icon FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- 3. Các file CSS nội bộ của dự án -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+
+    <header class="shopee-header">
+        <div class="grid-container">
+
+            <!-- Thanh điều hướng phía trên (Top Navbar) -->
+            <nav class="top-navbar">
+                <!-- Cụm menu bên trái -->
+                <ul class="nav-list">
+                    <li class="nav-item nav-item--separate">
+                        <a href="#" class="nav-link">Kênh Người Bán</a>
+                    </li>
+                    <li class="nav-item nav-item--separate">
+                        <a href="#" class="nav-link">Trở thành Người bán Shopee</a>
+                    </li>
+
+                    <!-- Mục Tải ứng dụng có chứa hộp thoại QR Code ẩn bên trong -->
+                    <li class="nav-item nav-item--separate nav-item--has-qr">
+                        <a href="#" class="nav-link">Tải ứng dụng</a>
+
+                        <!-- HỘP THOẠI QR CODE (Mặc định ẩn, hiện khi Hover) -->
+                        <div class="header-qr">
+                            <!-- Sử dụng API tạo ảnh QR mẫu để bạn chạy thử có hình ngay lập tức -->
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://shopee.vn"
+                                alt="Shopee QR Code" class="header-qr-img">
+
+                            <div class="header-qr-apps">
+                                <a href="#" class="header-qr-link">
+                                    <i class="fa-brands fa-apple"></i> App Store
+                                </a>
+                                <a href="#" class="header-qr-link">
+                                    <i class="fa-brands fa-google-play"></i> Google Play
+                                </a>
+                                <a href="#" class="header-qr-link">
+                                    <i class="fa-solid fa-bag-shopping"></i> AppGallery
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <span class="nav-title-no-pointer">Kết nối</span>
+                        <a href="#" class="nav-icon-link" title="Kết nối Facebook">
+                            <i class="nav-icon fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="nav-icon-link" title="Kết nối Instagram">
+                            <i class="nav-icon fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Cụm menu bên phải -->
+                <ul class="nav-list">
+                    <li class="nav-item nav-item--has-notify">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa-regular fa-bell"></i>
+                            Thông Báo
+                        </a>
+
+                        <div class="header-notify">
+                            <!-- 1. Tiêu đề hộp thông báo -->
+                            <header class="header-notify-header">
+                                <h3>Thông Báo Mới Nhận</h3>
+                            </header>
+
+                            <!-- 2. Danh sách các thông báo -->
+                            <ul class="header-notify-list">
+                                <!-- Item 1: Thông báo CHƯA ĐỌC (có thêm class --unread) -->
+                                <li class="header-notify-item header-notify-item--unread">
+                                    <a href="#" class="header-notify-link">
+                                        <img src="https://placehold.co/100x100/ee4d2d/ffffff?text=Sale+50%25"
+                                            alt="Ảnh thông báo" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">🔥 Siêu Sale Giữa Tháng - Voucher Giảm Đến
+                                                50%
+                                                Đã Vào Ví!</span>
+                                            <span class="header-notify-desc">Hàng ngàn deal sốc 1K, Freeship 0Đ mọi đơn
+                                                hàng
+                                                đang chờ bạn chốt đơn ngay hôm nay.</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- Item 2: Thông báo CHƯA ĐỌC -->
+                                <li class="header-notify-item header-notify-item--unread">
+                                    <a href="#" class="header-notify-link">
+                                        <img src="https://placehold.co/100x100/00bfa5/ffffff?text=Giao+Hang"
+                                            alt="Ảnh thông báo" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">Đơn hàng #261114SPVN của bạn đã được giao
+                                                thành
+                                                công</span>
+                                            <span class="header-notify-desc">Hãy đánh giá sản phẩm trước ngày 20/11 để
+                                                nhận
+                                                ngay 200 Shopee Xu nhé!</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- Item 3: Thông báo ĐÃ ĐỌC (không có class --unread) -->
+                                <li class="header-notify-item">
+                                    <a href="#" class="header-notify-link">
+                                        <img src="https://placehold.co/100x100/d0011b/ffffff?text=Mall"
+                                            alt="Ảnh thông báo" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">Xác thực tài khoản ShopeePay thành
+                                                công</span>
+                                            <span class="header-notify-desc">Tài khoản ví điện tử của bạn đã được bảo
+                                                mật 2
+                                                lớp. Tặng bạn mã giảm 20K cho đơn đầu tiên.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!-- 3. Chân hộp thông báo: Nút Xem tất cả -->
+                            <footer class="header-notify-footer">
+                                <a href="#" class="header-notify-footer-btn">Xem tất cả</a>
+                            </footer>
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa-regular fa-circle-question"></i>
+                            Hỗ Trợ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa-solid fa-globe"></i>
+                            Tiếng Việt
+                            <i class="fa-solid fa-chevron-down" style="font-size: 1rem; margin-left: 2px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item--separate">
+                        <a href="#" class="nav-link nav-link--strong">Đăng Ký</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link nav-link--strong">Đăng Nhập</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <!-- Khu vực Logo, Tìm kiếm và Giỏ hàng -->
+            <div class="header-with-search">
+
+                <!-- 1. KHỐI LOGO SHOPEE (Dùng SVG để sắc nét tuyệt đối) -->
+                <div class="header-logo">
+                    <a href="/" class="header-logo-link">
+                        <svg class="header-logo-svg" viewBox="0 0 192 65" fill="none">
+                            <!-- Icon túi xách Shopee -->
+                            <path
+                                d="M27.5 14C27.5 7.6 22.4 2.5 16 2.5C9.6 2.5 4.5 7.6 4.5 14H0.5L3.2 55.5C3.4 58.6 6 61 9.1 61H22.9C26 61 28.6 58.6 28.8 55.5L31.5 14H27.5ZM16 6.5C20.2 6.5 23.5 9.8 23.5 14H8.5C8.5 9.8 11.8 6.5 16 6.5ZM16 48C11.5 48 8.5 45.2 8.2 41.5H12.2C12.5 43.3 13.9 44.5 16 44.5C18.2 44.5 19.8 43.2 19.8 41.2C19.8 39.2 18.4 38.2 15.2 37.3C11.2 36.2 8.5 34.3 8.5 30.2C8.5 26.2 11.7 23.5 16 23.5C20.3 23.5 23.3 26.2 23.6 29.8H19.6C19.3 28 18 27 16 27C14 27 12.5 28.2 12.5 30C12.5 31.8 13.8 32.7 17 33.6C21 34.7 23.8 36.6 23.8 41C23.8 45.3 20.4 48 16 48Z"
+                                fill="currentColor" />
+                            <!-- Chữ Shopee -->
+                            <text x="40" y="47" fill="currentColor" font-size="36" font-weight="500"
+                                font-family="Roboto, sans-serif">Shopee</text>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- 2. KHỐI TÌM KIẾM TRUNG TÂM (Gồm Khung Search + Từ khóa gợi ý bên dưới) -->
+                <div class="header-search-wrapper">
+
+                    <!-- Khung Search màu trắng -->
+                    <div class="header-search">
+                        <!-- Bọc Input và History chung một thẻ cha để định vị -->
+                        <div class="header-search-input-wrap">
+                            <input type="text" class="header-search-input"
+                                placeholder="Shopee bao ship 0Đ - Đăng ký ngay!">
+
+                            <!-- HỘP LỊCH SỬ TÌM KIẾM (Hiện khi bấm chuột vào ô input) -->
+                            <div class="header-search-history">
+                                <h3 class="header-search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header-search-history-list">
+                                    <li class="header-search-history-item">
+                                        <a href="#">Bàn phím cơ không dây</a>
+                                    </li>
+                                    <li class="header-search-history-item">
+                                        <a href="#">Màn hình LG UltraGear 27 inch</a>
+                                    </li>
+                                    <li class="header-search-history-item">
+                                        <a href="#">Áo thun nam form rộng Cotton</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Nút bấm tìm kiếm màu cam -->
+                        <button class="header-search-btn">
+                            <i class="header-search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <!-- Dãy từ khóa Hot Trend nằm ngay dưới thanh tìm kiếm -->
+                    <ul class="header-search-suggest-list">
+                        <li><a href="#" class="header-search-suggest-item">Áo Khoác Dù</a></li>
+                        <li><a href="#" class="header-search-suggest-item">Tai Nghe Bluetooth</a></li>
+                        <li><a href="#" class="header-search-suggest-item">Dép Nam Quai Ngang</a></li>
+                        <li><a href="#" class="header-search-suggest-item">Bình Giữ Nhiệt</a></li>
+                        <li><a href="#" class="header-search-suggest-item">Chuột Không Dây</a></li>
+                        <li><a href="#" class="header-search-suggest-item">Ốp Lưng iPhone</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- 3. KHỐI GIỎ HÀNG (MINI CART POPOVER) -->
+                <div class="header-cart">
+                    <div class="header-cart-wrap">
+                        <i class="header-cart-icon fa-solid fa-cart-shopping"></i>
+                        <span class="header-cart-notice">3</span>
+
+                        <!-- HỘP THOẠI GIỎ HÀNG MINI -->
+                        <!-- Mẹo: Thêm class "header-cart-list--no-cart" vào thẻ div ngay dưới đây để test trạng thái Giỏ Hàng Trống! -->
+                        <div class="header-cart-list">
+
+                            <!-- TRẠNG THÁI 1: KHI GIỎ HÀNG TRỐNG (Mặc định ẩn) -->
+                            <img src="https://placehold.co/260x160/ffffff/ee4d2d?text=Empty+Cart+Bag"
+                                alt="Chưa có sản phẩm" class="header-cart-no-cart-img">
+                            <span class="header-cart-list-no-cart-msg">Chưa có sản phẩm</span>
+
+                            <!-- TRẠNG THÁI 2: KHI GIỎ HÀNG CÓ SẢN PHẨM -->
+                            <h4 class="header-cart-heading">Sản phẩm mới thêm</h4>
+
+                            <ul class="header-cart-list-item">
+                                <!-- Sản phẩm 1 -->
+                                <li class="header-cart-item">
+                                    <img src="https://placehold.co/100x100/ee4d2d/ffffff?text=KeyBoard"
+                                        alt="Bàn phím cơ" class="header-cart-img">
+                                    <div class="header-cart-item-info">
+                                        <div class="header-cart-item-head">
+                                            <h5 class="header-cart-item-name">Bàn phím cơ không dây AULA F75 Pro Mạch
+                                                Xuôi Hotswap RGB</h5>
+                                            <div class="header-cart-item-price-wrap">
+                                                <span class="header-cart-item-price">850.000₫</span>
+                                                <span class="header-cart-item-multiply">x</span>
+                                                <span class="header-cart-item-qnt">1</span>
+                                            </div>
+                                        </div>
+                                        <div class="header-cart-item-body">
+                                            <span class="header-cart-item-description">Phân loại: Trắng Xanh, Reaper
+                                                Switch</span>
+                                            <span class="header-cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Sản phẩm 2 -->
+                                <li class="header-cart-item">
+                                    <img src="https://placehold.co/100x100/00bfa5/ffffff?text=Monitor" alt="Màn hình LG"
+                                        class="header-cart-img">
+                                    <div class="header-cart-item-info">
+                                        <div class="header-cart-item-head">
+                                            <h5 class="header-cart-item-name">Màn hình Gaming LG UltraGear 27GS60F-B 27
+                                                inch FHD IPS 180Hz</h5>
+                                            <div class="header-cart-item-price-wrap">
+                                                <span class="header-cart-item-price">3.890.000₫</span>
+                                                <span class="header-cart-item-multiply">x</span>
+                                                <span class="header-cart-item-qnt">1</span>
+                                            </div>
+                                        </div>
+                                        <div class="header-cart-item-body">
+                                            <span class="header-cart-item-description">Phân loại: Bản Quốc Tế
+                                                180Hz</span>
+                                            <span class="header-cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Sản phẩm 3 -->
+                                <li class="header-cart-item">
+                                    <img src="https://placehold.co/100x100/f63/ffffff?text=T-Shirt" alt="Áo thun nam"
+                                        class="header-cart-img">
+                                    <div class="header-cart-item-info">
+                                        <div class="header-cart-item-head">
+                                            <h5 class="header-cart-item-name">Áo thun nam form rộng Cotton 100% định
+                                                lượng 250gsm dày dặn</h5>
+                                            <div class="header-cart-item-price-wrap">
+                                                <span class="header-cart-item-price">159.000₫</span>
+                                                <span class="header-cart-item-multiply">x</span>
+                                                <span class="header-cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="header-cart-item-body">
+                                            <span class="header-cart-item-description">Phân loại: Đen Nhám, Size
+                                                XL</span>
+                                            <span class="header-cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Chân hộp giỏ hàng: Nút Xem Giỏ Hàng -->
+                            <div class="header-cart-footer">
+                                <span class="header-cart-footer-msg">3 Hàng thêm vào giỏ</span>
+                                <a href="#" class="btn btn--primary header-cart-view-cart">Xem Giỏ Hàng</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+    </header>
+
+
+
+
+
+    <!-- 2. VÙNG NỘI DUNG CHÍNH (MAIN CONTENT) -->
+    <main class="shopee-body">
+
+        <!-- KHỐI 1: VÙNG MẶT TIỀN HERO BANNER (Nền trắng trải rộng 100% màn hình) -->
+        <section class="hero-section-wrapper">
+            <div class="grid-container">
+
+                <!-- Lưới CSS Grid 2:1 chứa 3 tấm Banner -->
+                <!-- Ô 1: Banner Slider Lớn bên trái (Chiếm 2/3 chiều ngang & Gộp 2 dòng dọc) -->
+                <div class="hero-banner-main">
+                    <!-- Ảnh quảng cáo chính -->
+                    <a href="#" class="hero-banner-link">
+                        <img src="https://placehold.co/800x235/ee4d2d/ffffff?text=SI%C3%8AU+SALE+11.11+-+GI%E1%BA%A2M+%C4%90%E1%BA%BEN+50%25+(800x235)"
+                            alt="Siêu Sale Shopee" class="hero-banner-img">
+                    </a>
+
+                    <!-- 1. NÚT MŨI TÊN LÙI (PREV BUTTON) - Bám sát mép trái -->
+                    <button class="slider-btn slider-btn--prev" aria-label="Ảnh trước">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <!-- 2. NÚT MŨI TÊN TIẾN (NEXT BUTTON) - Bám sát mép phải -->
+                    <button class="slider-btn slider-btn--next" aria-label="Ảnh tiếp theo">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- 3. DÃY CHẤM TRÒN PHÂN TRANG (PAGINATION DOTS) - Nằm giữa đáy Banner -->
+                    <ul class="slider-dots">
+                        <li class="slider-dot slider-dot--active"></li>
+                        <li class="slider-dot"></li>
+                        <li class="slider-dot"></li>
+                        <li class="slider-dot"></li>
+                        <li class="slider-dot"></li>
+                        <li class="slider-dot"></li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Nơi đặt dãy 8 Icon Dịch Vụ (Săn Sale, Mã Giảm Giá...) ở Bài 11 -->
+
+            </div>
+        </section>
+
+        <!-- KHỐI 2: CÁC SECTION NỘI DUNG TRÊN NỀN XÁM (Gom trong khung 1200px) -->
+        <div class="shopee-container grid-container">
+
+            <!-- Khu vực Danh mục ngành hàng -->
+            <section class="category-section">
+                <h2>Danh Mục</h2>
+            </section>
+
+            <!-- Khu vực Flash Sale -->
+            <section class="flash-sale-section">
+                <h2>Flash Sale</h2>
+            </section>
+
+            <!-- Khu vực Gợi ý hôm nay -->
+            <section class="daily-discover-section">
+                <h2>Gợi Ý Hôm Nay</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <h3>Áo Thun Nam Cotton Cao Cấp</h3>
+                        <p class="product-price">159.000₫</p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- 3. VÙNG CHÂN TRANG (FOOTER) -->
+    <footer class="shopee-footer">
+        <p>© 2026 Shopee Clone. Dự án thực hành 100 bài học HTML & CSS.</p>
+    </footer>
+
+</body>
+
+</html>
