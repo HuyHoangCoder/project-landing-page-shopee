@@ -3324,3 +3324,663 @@
     font-weight: 500;
 }
 
+/* Bổ sung vào cuối file ./assets/css/main.css */
+
+/* --- BÀI 22: KHU VỰC ĐÁNH GIÁ SẢN PHẨM (PRODUCT RATINGS & REVIEWS) --- */
+
+.product-ratings-section {
+    margin-top: 3.6rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Khung Tổng Quan Điểm Sao & Bộ Lọc (.rating-overview) */
+.rating-overview {
+    background-color: #fffbf8;      /* Nền cam phấn đặc trưng của khung Đánh giá Shopee */
+    border: 1px solid #f9ede5;
+    border-radius: 2px;
+    padding: 3rem;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 3.6rem;
+}
+
+/* Cột Trái: Điểm số 4.9 trên 5 */
+.rating-overview__briefing {
+    text-align: center;
+    flex-shrink: 0;
+    min-width: 14rem;
+}
+
+.rating-overview__score-wrap {
+    color: var(--shopee-primary);
+    margin-bottom: 0.8rem;
+}
+
+.rating-overview__score {
+    font-size: 3rem;                /* Số 4.9 to 30px nổi bật */
+    font-weight: 500;
+}
+
+.rating-overview__score-out-of {
+    font-size: 1.8rem;
+}
+
+.rating-overview__stars {
+    color: var(--shopee-primary);
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+/* Cột Phải: Dãy các nút bấm lọc bình luận */
+.rating-overview__filters {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;                /* Tự động rớt xuống hàng 2 khi hết chiều ngang */
+    gap: 0.8rem;
+}
+
+.rating-filter-input {
+    display: none;                  /* Ẩn nút radio gốc */
+}
+
+.rating-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.2rem;
+    min-width: 10rem;
+    padding: 0 1.4rem;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 2px;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.15s ease;
+}
+
+/* Khi nút lọc đang được chọn (:checked) -> Lên viền cam & chữ cam chuẩn Shopee */
+.rating-filter-input:checked + .rating-filter-btn {
+    border-color: var(--shopee-primary);
+    color: var(--shopee-primary);
+}
+
+/* 2. Danh Sách Bình Luận (Media Object Layout) */
+.review-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem 0 2rem 1.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.review-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Avatar tròn 40x40px bên trái */
+.review-item__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Khối nội dung bình luận bên phải */
+.review-item__main {
+    flex: 1;
+    margin-left: 1.5rem;
+}
+
+.review-item__author {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.review-item__stars {
+    color: var(--shopee-primary);
+    font-size: 1.1rem;
+    display: flex;
+    gap: 0.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.review-item__meta {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.54);
+    margin-bottom: 1.2rem;
+}
+
+/* Các tiêu chí đánh giá phụ (Chất lượng sản phẩm / Đúng với mô tả) */
+.review-item__attributes {
+    font-size: 1.35rem;
+    line-height: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.review-item__attributes span {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.review-item__comment {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.4rem;
+}
+
+/* Dãy ảnh & Video feedback thực tế của khách (72x72px) */
+.review-item__media-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+
+.review-media-thumb {
+    width: 7.2rem;                  /* Rộng 72px chuẩn kích thước ảnh review Shopee */
+    height: 7.2rem;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    cursor: zoom-in;                /* Con trỏ chuột biến thành kính lúp phóng to ảnh! */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.review-media-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nhãn thời lượng Video nằm đè ở đáy tấm ảnh đầu tiên (0:18) */
+.video-badge {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, 0.54);
+    color: var(--white-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.6rem;
+}
+
+/* Khung Phản Hồi Của Người Bán (Nền xám #f5f5f5) */
+.review-item__seller-reply {
+    background-color: #f5f5f5;
+    padding: 1.4rem 1.6rem;
+    border-radius: 2px;
+    margin-bottom: 1.4rem;
+}
+
+.seller-reply__heading {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #8b572a;                 /* Màu nâu cam đặc trưng cho tiêu đề Phản hồi của Shop */
+    margin-bottom: 0.6rem;
+}
+
+.seller-reply__text {
+    font-size: 1.35rem;
+    line-height: 1.9rem;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+/* Nút bấm Hữu ích (Thumbs up) */
+.review-like-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.4);
+    transition: color 0.15s ease;
+}
+
+.review-like-btn:hover {
+    color: var(--shopee-primary);
+}
+
+/* Bổ sung vào cuối file ./assets/css/main.css */
+
+/* --- CHƯƠNG 8 (BÀI 23): GIAO DIỆN TRANG GIỎ HÀNG & STICKY CHECKOUT BAR --- */
+
+.cart-section {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* 1. Dải thông báo Freeship màu vàng kem */
+.cart-freeship-banner {
+    background-color: #fffefb;
+    border: 1px solid rgba(224, 168, 0, 0.4);
+    padding: 1.2rem 1.6rem;
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+}
+
+.cart-freeship-icon {
+    color: #00bfa5;
+    font-size: 1.8rem;
+}
+
+/* --- CÔNG THỨC CHIA 6 CỘT ĐỒNG BỘ CHO CẢ HEADER LẪN TỪNG DÒNG SẢN PHẨM --- */
+.cart-table-header,
+.cart-item-row {
+    display: grid;
+    /* Cột 1 (Checkbox: 50px) | Cột 2 (Sản phẩm: 1fr) | Cột 3,4,5,6 cố định chiều rộng */
+    grid-template-columns: 5rem 1fr 15rem 15rem 14rem 12rem;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* 2. Thanh Tiêu Đề 6 Cột (.cart-table-header) */
+.cart-table-header {
+    height: 5.5rem;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    color: #888888;
+}
+
+.cart-col-product {
+    color: var(--text-primary);
+}
+
+.cart-col-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3. Khối Gian Hàng trong Giỏ (.cart-shop-group) */
+.cart-shop-group {
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.cart-shop-header {
+    height: 6rem;
+    padding: 0 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    display: flex;
+    align-items: center;
+}
+
+.cart-shop-header .cart-col-checkbox {
+    width: 5rem;                    /* Khớp đúng 50px với cột 1 của Grid bên dưới! */
+    flex-shrink: 0;
+}
+
+.cart-shop-badge {
+    background-color: var(--shopee-primary);
+    color: var(--white-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.8rem;
+}
+
+.cart-shop-badge--mall {
+    background-color: var(--shopee-mall-red);
+}
+
+.cart-shop-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-right: 0.8rem;
+}
+
+.cart-shop-chat-btn {
+    color: var(--shopee-primary);
+    font-size: 1.6rem;
+}
+
+/* Dải Mua Kèm Deal Sốc bên trong Shop */
+.cart-bundle-banner {
+    background-color: #fff3f0;
+    padding: 1rem 2rem 1rem 7rem;   /* Thụt lề trái 70px (20px padding + 50px cột checkbox) để thẳng hàng với ảnh! */
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+}
+
+.bundle-tag {
+    color: var(--shopee-primary);
+    border: 1px solid var(--shopee-primary);
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    background-color: var(--white-color);
+}
+
+.bundle-link {
+    color: var(--shopee-primary);
+    font-weight: 500;
+}
+
+/* 4. Dòng Sản Phẩm trong Giỏ (.cart-item-row) */
+.cart-item-row {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+/* Cột 2: Chia thành Ảnh (80px) + Tên sản phẩm (flex: 1) + Phân loại hàng (180px) */
+.cart-item-overview {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+    padding-right: 2rem;
+}
+
+.cart-item-img-wrap {
+    width: 8rem;
+    height: 8rem;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.cart-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cart-item-return-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.2rem;
+    color: var(--shopee-primary);
+    border: 1px solid var(--shopee-primary);
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+}
+
+/* Hộp chọn lại Phân loại hàng ngay trong dòng sản phẩm */
+.cart-item-variation {
+    width: 18rem;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    transition: background-color 0.15s ease;
+}
+
+.cart-item-variation:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.cart-variation-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Cột 3, 5, 6: Đơn giá, Thành tiền & Thao tác */
+.cart-item-price {
+    flex-direction: row;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.cart-price-old {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+}
+
+.cart-price-current {
+    color: var(--text-primary);
+}
+
+.cart-item-total {
+    font-size: 1.5rem;
+    color: var(--shopee-primary);
+    font-weight: 500;
+}
+
+.cart-item-actions {
+    gap: 0.6rem;
+}
+
+.cart-action-delete {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+}
+
+.cart-action-delete:hover {
+    color: var(--shopee-primary);
+}
+
+.cart-action-similar {
+    font-size: 1.25rem;
+    color: var(--shopee-primary);
+    line-height: 1.5rem;
+}
+
+/* Chân Gian hàng: Voucher & Freeship */
+.cart-shop-footer {
+    padding: 1.4rem 2rem 1.4rem 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.35rem;
+}
+
+.cart-shop-footer-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-voucher-icon { color: var(--shopee-primary); font-size: 1.6rem; }
+.cart-shipping-icon { color: #00bfa5; font-size: 1.6rem; }
+
+.cart-footer-action-link {
+    color: #0055aa;
+    margin-left: 1.2rem;
+}
+
+/* ================================================================= */
+/* 5. BÍ THUẬT: THANH THANH TOÁN BÁM DÍNH ĐÁY MÀN HÌNH (BOTTOM: 0)   */
+/* ================================================================= */
+.cart-checkout-bar {
+    background-color: var(--white-color);
+    border-radius: 2px;
+    /* Bóng đổ hắt ngược lên phía trên (0 -4px 12px) tạo cảm giác nổi đè lên danh sách giỏ hàng! */
+    box-shadow: 0 -0.3rem 1rem 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* KÍCH HOẠT STICKY BOTTOM BAR */
+    position: sticky;
+    bottom: 0;
+    z-index: calc(var(--z-sticky) - 2); /* Tầng 98: Nổi trên danh sách sản phẩm khi cuộn */
+}
+
+/* Tầng 1: Chọn Shopee Voucher (Căn về nửa bên phải từ cột 550px) */
+.checkout-bar__voucher-row {
+    padding: 1.2rem 2.4rem 1.2rem 55rem;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.09);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.checkout-voucher-left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-primary);
+}
+
+.checkout-voucher-icon {
+    color: var(--shopee-primary);
+    font-size: 1.8rem;
+}
+
+.checkout-voucher-link {
+    color: #0055aa;
+}
+
+/* Tầng 2: Dùng Shopee Xu */
+.checkout-bar__coin-row {
+    padding: 1.2rem 2.4rem 1.2rem 55rem;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.09);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.checkout-coin-label {
+    align-items: center;
+}
+
+.checkout-coin-icon {
+    color: #f6a700;                 /* Màu vàng đồng xu Shopee */
+    font-size: 1.6rem;
+}
+
+.checkout-coin-title {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.checkout-coin-sub {
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    margin-left: 0.6rem;
+}
+
+.checkout-coin-discount {
+    color: var(--shopee-primary);
+    font-weight: 500;
+}
+
+/* Tầng 3: Chọn tất cả + Tổng thanh toán + Nút MUA HÀNG */
+.checkout-bar__main-row {
+    padding: 1.6rem 2.4rem 1.6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout-main__left {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.checkout-select-all {
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.checkout-action-btn {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.checkout-action-btn:hover {
+    color: var(--shopee-primary);
+}
+
+.checkout-action-btn--primary {
+    color: var(--shopee-primary);
+}
+
+.checkout-main__right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.checkout-total-info {
+    text-align: right;
+}
+
+.checkout-total-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 0.8rem;
+}
+
+.checkout-total-label {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.checkout-total-price {
+    font-size: 2.4rem;              /* Tổng tiền to 24px màu cam cực kỳ nổi bật */
+    color: var(--shopee-primary);
+    font-weight: 500;
+}
+
+.checkout-total-bottom {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-top: 0.2rem;
+}
+
+.checkout-saved-amount {
+    color: var(--shopee-primary);
+    margin-left: 1.2rem;
+}
+
+.checkout-submit-btn {
+    min-width: 21rem;               /* Nút Mua Hàng rộng 210px, cao 40px chuẩn Shopee */
+    height: 4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+

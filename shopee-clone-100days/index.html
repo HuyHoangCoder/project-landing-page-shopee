@@ -1637,51 +1637,191 @@
                     <div class="product-content__main">
 
                         <!-- PHẦN A: BẢNG CHI TIẾT SẢN PHẨM (SPECIFICATIONS) -->
-                        <section class="product-specs-section">
-                            <h2 class="product-section-heading">CHI TIẾT SẢN PHẨM</h2>
+                        <!-- PHẦN C: KHU VỰC ĐÁNH GIÁ SẢN PHẨM (PRODUCT RATINGS & REVIEWS - BÀI 22) -->
+                        <section class="product-ratings-section">
+                            <h2 class="product-section-heading">ĐÁNH GIÁ SẢN PHẨM</h2>
 
-                            <dl class="specs-list">
-                                <div class="specs-row">
-                                    <dt class="specs-term">Danh Mục</dt>
-                                    <dd class="specs-detail">
-                                        <a href="#" class="specs-link">Shopee</a> >
-                                        <a href="#" class="specs-link">Máy Tính & Laptop</a> >
-                                        <a href="#" class="specs-link">Phụ Kiện Máy Tính</a> >
-                                        <a href="#" class="specs-link">Bàn Phím</a>
-                                    </dd>
+                            <!-- 1. Khung Tổng Quan Điểm Sao & Bộ Lọc Bình Luận -->
+                            <div class="rating-overview">
+
+                                <!-- Cột Trái: Điểm số 4.9 trên 5 -->
+                                <div class="rating-overview__briefing">
+                                    <div class="rating-overview__score-wrap">
+                                        <span class="rating-overview__score">4.9</span>
+                                        <span class="rating-overview__score-out-of">trên 5</span>
+                                    </div>
+                                    <div class="rating-overview__stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
                                 </div>
-                                <div class="specs-row">
-                                    <dt class="specs-term">Thương hiệu</dt>
-                                    <dd class="specs-detail"><a href="#" class="specs-link">AULA</a></dd>
+
+                                <!-- Cột Phải: Dãy nút bấm lọc bình luận (Bấm đổi nút bằng Radio Hack) -->
+                                <div class="rating-overview__filters">
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input" checked>
+                                        <span class="rating-filter-btn">Tất Cả</span>
+                                    </label>
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input">
+                                        <span class="rating-filter-btn">5 Sao (1,1k)</span>
+                                    </label>
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input">
+                                        <span class="rating-filter-btn">4 Sao (85)</span>
+                                    </label>
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input">
+                                        <span class="rating-filter-btn">3 Sao (12)</span>
+                                    </label>
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input">
+                                        <span class="rating-filter-btn">2 Sao (2)</span>
+                                    </label>
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input">
+                                        <span class="rating-filter-btn">1 Sao (1)</span>
+                                    </label>
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input">
+                                        <span class="rating-filter-btn">Có Bình Luận (640)</span>
+                                    </label>
+                                    <label class="rating-filter-item">
+                                        <input type="radio" name="rating-filter" class="rating-filter-input">
+                                        <span class="rating-filter-btn">Có Hình Ảnh / Video (412)</span>
+                                    </label>
                                 </div>
-                                <div class="specs-row">
-                                    <dt class="specs-term">Kiểu kết nối</dt>
-                                    <dd class="specs-detail">3 Mode (Không dây Bluetooth 5.0 / Receiver 2.4GHz / Có dây
-                                        Type-C)</dd>
-                                </div>
-                                <div class="specs-row">
-                                    <dt class="specs-term">Bàn phím cơ</dt>
-                                    <dd class="specs-detail">Có (Mạch xuôi Hotswap 5 Pin + Cấu trúc Gasket Mount 5 lớp
-                                        tiêu âm)</dd>
-                                </div>
-                                <div class="specs-row">
-                                    <dt class="specs-term">Hạn bảo hành</dt>
-                                    <dd class="specs-detail">12 tháng</dd>
-                                </div>
-                                <div class="specs-row">
-                                    <dt class="specs-term">Loại bảo hành</dt>
-                                    <dd class="specs-detail">Bảo hành nhà cung cấp (Đổi mới trong 15 ngày đầu)</dd>
-                                </div>
-                                <div class="specs-row">
-                                    <dt class="specs-term">Kho hàng</dt>
-                                    <dd class="specs-detail">482</dd>
-                                </div>
-                                <div class="specs-row">
-                                    <dt class="specs-term">Gửi từ</dt>
-                                    <dd class="specs-detail">TP. Hồ Chí Minh</dd>
-                                </div>
-                            </dl>
+
+                            </div>
+
+                            <!-- 2. Danh Sách Bình Luận Thực Tế Của Người Mua (Review List) -->
+                            <div class="review-list">
+
+                                <!-- BÌNH LUẬN SỐ 1 (Đầy đủ Ảnh + Video + Phản hồi của Shop) -->
+                                <article class="review-item">
+                                    <!-- Cột trái: Avatar người mua -->
+                                    <img src="https://placehold.co/100x100/2673dd/ffffff?text=H" alt="Avatar người mua"
+                                        class="review-item__avatar">
+
+                                    <!-- Cột phải: Nội dung chi tiết đánh giá -->
+                                    <div class="review-item__main">
+                                        <div class="review-item__author">hieu_backend_dev</div>
+
+                                        <div class="review-item__stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+
+                                        <div class="review-item__meta">
+                                            2026-11-12 09:45  |  Phân loại hàng: Trắng Xanh (Ice Vein)
+                                        </div>
+
+                                        <!-- Các thuộc tính đánh giá chi tiết của Shopee -->
+                                        <div class="review-item__attributes">
+                                            <p><span>Chất lượng sản phẩm:</span> Tuyệt vời, build chắc chắn, đầm tay</p>
+                                            <p><span>Đúng với mô tả:</span> Chuẩn 100% như hình quảng cáo</p>
+                                        </div>
+
+                                        <p class="review-item__comment">Mình mua về để gõ code hàng ngày, phải nói là
+                                            Reaper Switch âm nổ rất đanh và êm (creamy/thocky), không ồn ảnh hưởng đồng
+                                            nghiệp. Kết nối 2.4GHz và Bluetooth chuyển qua lại giữa PC với MacBook cực
+                                            nhanh. Shop đóng gói 3 lớp chống sốc rất kỹ, giao Hỏa Tốc ở TP.HCM chỉ 1
+                                            tiếng là nhận được hàng!</p>
+
+                                        <!-- Dãy hình ảnh & Video thực tế khách hàng chụp -->
+                                        <ul class="review-item__media-list">
+                                            <li class="review-media-thumb review-media-thumb--video">
+                                                <img src="https://placehold.co/150x150/ee4d2d/ffffff?text=Sound+Test"
+                                                    alt="Video test âm phím">
+                                                <span class="video-badge">
+                                                    <i class="fa-solid fa-video"></i> 0:18
+                                                </span>
+                                            </li>
+                                            <li class="review-media-thumb">
+                                                <img src="https://placehold.co/150x150/00bfa5/ffffff?text=Anh+Thuc+Te+1"
+                                                    alt="Ảnh thực tế 1">
+                                            </li>
+                                            <li class="review-media-thumb">
+                                                <img src="https://placehold.co/150x150/ff9800/ffffff?text=Anh+Thuc+Te+2"
+                                                    alt="Ảnh thực tế 2">
+                                            </li>
+                                        </ul>
+
+                                        <!-- Khung Phản Hồi Của Người Bán -->
+                                        <div class="review-item__seller-reply">
+                                            <h4 class="seller-reply__heading">Phản Hồi Của Người Bán</h4>
+                                            <p class="seller-reply__text">Dạ AULA Official Store VN xin cảm ơn bạn đã
+                                                tin tưởng lựa chọn sản phẩm và để lại đánh giá 5 sao vô cùng tâm huyết
+                                                ạ! Chúc bạn luôn có những giờ phút gõ code thật thăng hoa cùng chiếc bàn
+                                                phím F75 Pro nhé! ❤️</p>
+                                        </div>
+
+                                        <!-- Nút bấm Hữu ích (Like) dưới đáy bình luận -->
+                                        <div class="review-item__actions">
+                                            <button type="button" class="review-like-btn">
+                                                <i class="fa-solid fa-thumbs-up"></i>
+                                                <span>Hữu Ích? (28)</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- BÌNH LUẬN SỐ 2 -->
+                                <article class="review-item">
+                                    <img src="https://placehold.co/100x100/00bfa5/ffffff?text=P" alt="Avatar người mua"
+                                        class="review-item__avatar">
+
+                                    <div class="review-item__main">
+                                        <div class="review-item__author">phuong_designer_99</div>
+
+                                        <div class="review-item__stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+
+                                        <div class="review-item__meta">
+                                            2026-11-10 18:20  |  Phân loại hàng: Tím Hồng Pastel
+                                        </div>
+
+                                        <p class="review-item__comment">Màu Tím Hồng ở ngoài nhìn xinh xỉu luôn mọi
+                                            người ơi! Đèn LED RGB mạch xuôi cực sáng, núm xoay chỉnh âm lượng vặn rất
+                                            mượt. Áp được mã giảm giá 50k của Shop nên giá quá hời so với chất lượng.
+                                        </p>
+
+                                        <ul class="review-item__media-list">
+                                            <li class="review-media-thumb">
+                                                <img src="https://placehold.co/150x150/7b1fa2/ffffff?text=Tim+Hong+1"
+                                                    alt="Ảnh thực tế màu tím hồng">
+                                            </li>
+                                            <li class="review-media-thumb">
+                                                <img src="https://placehold.co/150x150/d0011b/ffffff?text=Tim+Hong+2"
+                                                    alt="Ảnh góc nghiêng">
+                                            </li>
+                                        </ul>
+
+                                        <div class="review-item__actions">
+                                            <button type="button" class="review-like-btn">
+                                                <i class="fa-solid fa-thumbs-up"></i>
+                                                <span>Hữu Ích? (9)</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+
                         </section>
+
+
 
                         <!-- PHẦN B: BÀI VIẾT MÔ TẢ SẢN PHẨM (DESCRIPTION) -->
                         <section class="product-desc-section">
@@ -1742,6 +1882,274 @@
 
 
             </section>
+
+            <!-- ================================================================= -->
+            <!-- CHƯƠNG 8 (BÀI 23): GIAO DIỆN TRANG GIỎ HÀNG & STICKY CHECKOUT BAR -->
+            <!-- ================================================================= -->
+            <section class="cart-section">
+
+                <!-- 1. Dải thông báo Freeship màu vàng kem trên đỉnh Giỏ hàng -->
+                <div class="cart-freeship-banner">
+                    <i class="fa-solid fa-truck-fast cart-freeship-icon"></i>
+                    <span>Nhấn vào mục Mã giảm giá ở cuối trang để hưởng miễn phí vận chuyển bạn nhé!</span>
+                </div>
+
+                <!-- 2. Thanh Tiêu Đề 6 Cột (Cart Table Header) -->
+                <div class="cart-table-header">
+                    <div class="cart-col-checkbox">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-checkbox__input" checked>
+                            <span class="filter-checkbox__box"><i class="fa-solid fa-check"></i></span>
+                        </label>
+                    </div>
+                    <div class="cart-col-product">Sản Phẩm</div>
+                    <div class="cart-col-center">Đơn Giá</div>
+                    <div class="cart-col-center">Số Lượng</div>
+                    <div class="cart-col-center">Số Tiền</div>
+                    <div class="cart-col-center">Thao Tác</div>
+                </div>
+
+                <!-- 3. KHỐI GIAN HÀNG SỐ 1: AULA OFFICIAL STORE VN -->
+                <div class="cart-shop-group">
+
+                    <!-- Header của Gian hàng trong Giỏ -->
+                    <div class="cart-shop-header">
+                        <div class="cart-col-checkbox">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" class="filter-checkbox__input" checked>
+                                <span class="filter-checkbox__box"><i class="fa-solid fa-check"></i></span>
+                            </label>
+                        </div>
+                        <span class="cart-shop-badge">Yêu thích+</span>
+                        <a href="#" class="cart-shop-name">AULA Official Store VN</a>
+                        <button type="button" class="cart-shop-chat-btn" title="Chat với Shop">
+                            <i class="fa-solid fa-comments"></i>
+                        </button>
+                    </div>
+
+                    <!-- Dải khuyến mãi Mua Kèm Deal Sốc bên trong Shop -->
+                    <div class="cart-bundle-banner">
+                        <span class="bundle-tag">Mua Kèm Deal Sốc</span>
+                        <span class="bundle-text">Mua thêm 1 sản phẩm để được giảm thêm ₫20.000</span>
+                        <a href="#" class="bundle-link">Thêm ></a>
+                    </div>
+
+                    <!-- Dòng Sản Phẩm 1 của Shop 1 -->
+                    <div class="cart-item-row">
+                        <!-- Cột 1: Checkbox -->
+                        <div class="cart-col-checkbox">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" class="filter-checkbox__input" checked>
+                                <span class="filter-checkbox__box"><i class="fa-solid fa-check"></i></span>
+                            </label>
+                        </div>
+
+                        <!-- Cột 2: Ảnh + Tên sản phẩm + Hộp đổi Phân loại hàng -->
+                        <div class="cart-item-overview">
+                            <a href="#" class="cart-item-img-wrap">
+                                <img src="https://placehold.co/160x160/ee4d2d/ffffff?text=AULA+F75+Pro"
+                                    alt="Bàn phím AULA F75 Pro" class="cart-item-img">
+                            </a>
+                            <div class="cart-item-details">
+                                <a href="#" class="cart-item-name">Bàn phím cơ không dây AULA F75 Pro 3 Mode Mạch Xuôi
+                                    Hotswap LED RGB</a>
+                                <div class="cart-item-return-tag">
+                                    <i class="fa-solid fa-rotate-left"></i> Đổi ý miễn phí 15 ngày
+                                </div>
+                            </div>
+                            <!-- Nút chọn lại Phân loại hàng ngay trong Giỏ -->
+                            <div class="cart-item-variation">
+                                <div class="cart-variation-label">
+                                    Phân loại hàng: <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                                <div class="cart-variation-value">Trắng Xanh (Ice Vein), Reaper Switch</div>
+                            </div>
+                        </div>
+
+                        <!-- Cột 3: Đơn Giá -->
+                        <div class="cart-col-center cart-item-price">
+                            <span class="cart-price-old">₫1.390.000</span>
+                            <span class="cart-price-current">₫850.000</span>
+                        </div>
+
+                        <!-- Cột 4: Bộ tăng giảm Số Lượng (Tái sử dụng class từ Bài 20) -->
+                        <div class="cart-col-center">
+                            <div class="quantity-stepper">
+                                <button type="button" class="quantity-btn"><i class="fa-solid fa-minus"></i></button>
+                                <input type="text" class="quantity-input" value="1" aria-label="Số lượng">
+                                <button type="button" class="quantity-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Cột 5: Số Tiền (Thành tiền màu cam) -->
+                        <div class="cart-col-center">
+                            <span class="cart-item-total">₫850.000</span>
+                        </div>
+
+                        <!-- Cột 6: Thao Tác (Xóa / Tìm tương tự) -->
+                        <div class="cart-col-center cart-item-actions">
+                            <button type="button" class="cart-action-delete">Xóa</button>
+                            <a href="#" class="cart-action-similar">
+                                Tìm sản phẩm tương tự <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chân Gian hàng: Voucher của Shop & Freeship -->
+                    <div class="cart-shop-footer">
+                        <div class="cart-shop-footer-row">
+                            <i class="fa-solid fa-ticket cart-voucher-icon"></i>
+                            <span>Đã giảm ₫50.000 từ Voucher của Shop</span>
+                            <a href="#" class="cart-footer-action-link">Thêm mã giảm giá của Shop</a>
+                        </div>
+                        <div class="cart-shop-footer-row">
+                            <i class="fa-solid fa-truck-fast cart-shipping-icon"></i>
+                            <span>Giảm ₫30.000 phí vận chuyển đơn tối thiểu ₫0</span>
+                            <a href="#" class="cart-footer-action-link">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4. KHỐI GIAN HÀNG SỐ 2: LG OFFICIAL FLAGSHIP STORE -->
+                <div class="cart-shop-group">
+
+                    <div class="cart-shop-header">
+                        <div class="cart-col-checkbox">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" class="filter-checkbox__input" checked>
+                                <span class="filter-checkbox__box"><i class="fa-solid fa-check"></i></span>
+                            </label>
+                        </div>
+                        <span class="cart-shop-badge cart-shop-badge--mall">Mall</span>
+                        <a href="#" class="cart-shop-name">LG Official Flagship Store</a>
+                        <button type="button" class="cart-shop-chat-btn" title="Chat với Shop">
+                            <i class="fa-solid fa-comments"></i>
+                        </button>
+                    </div>
+
+                    <!-- Dòng Sản Phẩm 1 của Shop 2 -->
+                    <div class="cart-item-row">
+                        <div class="cart-col-checkbox">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" class="filter-checkbox__input" checked>
+                                <span class="filter-checkbox__box"><i class="fa-solid fa-check"></i></span>
+                            </label>
+                        </div>
+
+                        <div class="cart-item-overview">
+                            <a href="#" class="cart-item-img-wrap">
+                                <img src="https://placehold.co/160x160/d0011b/ffffff?text=LG+UltraGear+27"
+                                    alt="Màn hình LG UltraGear" class="cart-item-img">
+                            </a>
+                            <div class="cart-item-details">
+                                <a href="#" class="cart-item-name">Màn hình Gaming LG UltraGear 27GS60F-B 27 inch FHD
+                                    IPS 180Hz 1ms HDR10</a>
+                                <div class="cart-item-return-tag">
+                                    <i class="fa-solid fa-shield-heart"></i> Bảo hành chính hãng 24 tháng
+                                </div>
+                            </div>
+                            <div class="cart-item-variation">
+                                <div class="cart-variation-label">
+                                    Phân loại hàng: <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                                <div class="cart-variation-value">27 Inch / IPS / 180Hz</div>
+                            </div>
+                        </div>
+
+                        <div class="cart-col-center cart-item-price">
+                            <span class="cart-price-old">₫4.890.000</span>
+                            <span class="cart-price-current">₫3.890.000</span>
+                        </div>
+
+                        <div class="cart-col-center">
+                            <div class="quantity-stepper">
+                                <button type="button" class="quantity-btn"><i class="fa-solid fa-minus"></i></button>
+                                <input type="text" class="quantity-input" value="1" aria-label="Số lượng">
+                                <button type="button" class="quantity-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="cart-col-center">
+                            <span class="cart-item-total">₫3.890.000</span>
+                        </div>
+
+                        <div class="cart-col-center cart-item-actions">
+                            <button type="button" class="cart-action-delete">Xóa</button>
+                            <a href="#" class="cart-action-similar">
+                                Tìm sản phẩm tương tự <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ================================================================= -->
+                <!-- 5. THANH THANH TOÁN BÁM DÍNH ĐÁY MÀN HÌNH (STICKY CHECKOUT BAR)   -->
+                <!-- ================================================================= -->
+                <div class="cart-checkout-bar">
+
+                    <!-- Tầng 1 của Checkout Bar: Chọn Shopee Voucher -->
+                    <div class="checkout-bar__voucher-row">
+                        <div class="checkout-voucher-left">
+                            <i class="fa-solid fa-ticket checkout-voucher-icon"></i>
+                            <span>Shopee Voucher</span>
+                        </div>
+                        <a href="#" class="checkout-voucher-link">Chọn hoặc nhập mã</a>
+                    </div>
+
+                    <!-- Tầng 2 của Checkout Bar: Dùng Shopee Xu -->
+                    <div class="checkout-bar__coin-row">
+                        <label class="filter-checkbox checkout-coin-label">
+                            <input type="checkbox" class="filter-checkbox__input" checked>
+                            <span class="filter-checkbox__box"><i class="fa-solid fa-check"></i></span>
+                            <i class="fa-solid fa-coins checkout-coin-icon"></i>
+                            <span class="checkout-coin-title">Shopee Xu</span>
+                            <span class="checkout-coin-sub">Đã dùng 20.000 Shopee Xu</span>
+                        </label>
+                        <span class="checkout-coin-discount">-₫20.000</span>
+                    </div>
+
+                    <!-- Tầng 3 (Tầng chính): Chọn tất cả + Tổng thanh toán + Nút MUA HÀNG -->
+                    <div class="checkout-bar__main-row">
+
+                        <!-- Nhánh trái: Chọn tất cả / Xóa / Lưu vào mục Đã thích -->
+                        <div class="checkout-main__left">
+                            <label class="filter-checkbox checkout-select-all">
+                                <input type="checkbox" class="filter-checkbox__input" checked>
+                                <span class="filter-checkbox__box"><i class="fa-solid fa-check"></i></span>
+                                <span class="checkout-action-btn">Chọn Tất Cả (2)</span>
+                            </label>
+                            <button type="button" class="checkout-action-btn">Xóa</button>
+                            <button type="button" class="checkout-action-btn checkout-action-btn--primary">Lưu vào mục
+                                Đã thích</button>
+                        </div>
+
+                        <!-- Nhánh phải: Tổng thanh toán & Nút MUA HÀNG cỡ lớn -->
+                        <div class="checkout-main__right">
+                            <div class="checkout-total-info">
+                                <div class="checkout-total-top">
+                                    <span class="checkout-total-label">Tổng thanh toán (2 Sản phẩm):</span>
+                                    <span class="checkout-total-price">₫4.670.000</span>
+                                </div>
+                                <div class="checkout-total-bottom">
+                                    <span>Tiết kiệm</span>
+                                    <span class="checkout-saved-amount">₫1.560.000</span>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn--primary checkout-submit-btn">
+                                Mua Hàng
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
 
 
 
