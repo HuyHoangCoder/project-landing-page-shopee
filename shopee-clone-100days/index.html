@@ -73,6 +73,9 @@
 
                 <!-- Cụm menu bên phải -->
                 <ul class="nav-list">
+
+
+
                     <li class="nav-item nav-item--has-notify">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fa-regular fa-bell"></i>
@@ -160,8 +163,14 @@
                     <li class="nav-item nav-item--separate">
                         <a href="#" class="nav-link nav-link--strong">Đăng Ký</a>
                     </li>
+                    <li class="nav-item nav-item--separate">
+                        <!-- Dùng thẻ <label for="modal-auth-toggle"> để khi click vào chữ Đăng Ký sẽ bật Popup! -->
+                        <label for="modal-auth-toggle" class="nav-link nav-link--strong" style="cursor: pointer;">Đăng
+                            Ký</label>
+                    </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link nav-link--strong">Đăng Nhập</a>
+                        <label for="modal-auth-toggle" class="nav-link nav-link--strong" style="cursor: pointer;">Đăng
+                            Nhập</label>
                     </li>
                 </ul>
             </nav>
@@ -381,32 +390,1608 @@
 
                 <!-- Nơi đặt dãy 8 Icon Dịch Vụ (Săn Sale, Mã Giảm Giá...) ở Bài 11 -->
 
+                <!-- DÃY 8 ICON DỊCH VỤ NỔI BẬT (HERO SERVICE BAR) -->
+                <ul class="hero-service-list">
+                    <!-- Dịch vụ 1 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #ee4d2d; border-color: #fdece8; background-color: #fff8f6;">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <span class="hero-service-text">Khung Giờ Săn Sale</span>
+                        </a>
+                    </li>
+
+                    <!-- Dịch vụ 2 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #00bfa5; border-color: #e0f7f4; background-color: #f2fcfb;">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <span class="hero-service-text">Miễn Phí Vận Chuyển</span>
+                        </a>
+                    </li>
+
+                    <!-- Dịch vụ 3 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #ff9800; border-color: #fff3e0; background-color: #fffaf2;">
+                                <i class="fa-solid fa-ticket"></i>
+                            </div>
+                            <span class="hero-service-text">Voucher Giảm Đến 1 Triệu</span>
+                        </a>
+                    </li>
+
+                    <!-- Dịch vụ 4 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #d0011b; border-color: #fae6e8; background-color: #fdf5f6;">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <span class="hero-service-text">Shopee Mall Chính Hãng</span>
+                        </a>
+                    </li>
+
+                    <!-- Dịch vụ 5 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #ee4d2d; border-color: #fdece8; background-color: #fff8f6;">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <span class="hero-service-text">Shopee Siêu Rẻ</span>
+                        </a>
+                    </li>
+
+                    <!-- Dịch vụ 6 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #2673dd; border-color: #e8f0fc; background-color: #f5f9fe;">
+                                <i class="fa-solid fa-percent"></i>
+                            </div>
+                            <span class="hero-service-text">Mã Giảm Giá Hot</span>
+                        </a>
+                    </li>
+
+                    <!-- Dịch vụ 7 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #7b1fa2; border-color: #f3e5f5; background-color: #faf5fb;">
+                                <i class="fa-solid fa-earth-asia"></i>
+                            </div>
+                            <span class="hero-service-text">Hàng Quốc Tế</span>
+                        </a>
+                    </li>
+
+                    <!-- Dịch vụ 8 -->
+                    <li class="hero-service-item">
+                        <a href="#" class="hero-service-link">
+                            <div class="hero-service-icon-box"
+                                style="color: #009688; border-color: #e0f2f1; background-color: #f2f9f9;">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <span class="hero-service-text">Nạp Thẻ & Dịch Vụ</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+
             </div>
         </section>
 
         <!-- KHỐI 2: CÁC SECTION NỘI DUNG TRÊN NỀN XÁM (Gom trong khung 1200px) -->
         <div class="shopee-container grid-container">
 
+
+
             <!-- Khu vực Danh mục ngành hàng -->
+            <!-- Khu vực Danh mục ngành hàng (Category Section) -->
             <section class="category-section">
-                <h2>Danh Mục</h2>
-            </section>
+                <!-- 1. Tiêu đề khối Danh Mục -->
+                <header class="section-header">
+                    <h2 class="section-title">DANH MỤC</h2>
+                </header>
 
-            <!-- Khu vực Flash Sale -->
-            <section class="flash-sale-section">
-                <h2>Flash Sale</h2>
-            </section>
+                <!-- 2. Lưới 2 hàng x 10 cột (20 Ngành hàng) -->
+                <div class="category-body">
+                    <ul class="category-grid">
+                        <!-- Hàng 1: Từ ô 1 đến ô 10 -->
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fff8f6/ee4d2d?text=Ao+Nam"
+                                        alt="Thời Trang Nam" class="category-img">
+                                </div>
+                                <span class="category-name">Thời Trang Nam</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f2fcfb/00bfa5?text=Phone"
+                                        alt="Điện Thoại & Phụ Kiện" class="category-img">
+                                </div>
+                                <span class="category-name">Điện Thoại & Phụ Kiện</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f5f9fe/2673dd?text=TV+Loa"
+                                        alt="Thiết Bị Điện Tử" class="category-img">
+                                </div>
+                                <span class="category-name">Thiết Bị Điện Tử</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fffaf2/ff9800?text=Laptop"
+                                        alt="Máy Tính & Laptop" class="category-img">
+                                </div>
+                                <span class="category-name">Máy Tính & Laptop</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/faf5fb/7b1fa2?text=Camera"
+                                        alt="Máy Ảnh & Máy Quay Phim" class="category-img">
+                                </div>
+                                <span class="category-name">Máy Ảnh & Máy Quay Phim</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fdf5f6/d0011b?text=Watch" alt="Đồng Hồ"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Đồng Hồ</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f2f9f9/009688?text=Shoes" alt="Giày Dép Nam"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Giày Dép Nam</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fff8f6/ee4d2d?text=Gia+Dung"
+                                        alt="Thiết Bị Điện Gia Dụng" class="category-img">
+                                </div>
+                                <span class="category-name">Thiết Bị Điện Gia Dụng</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f5f9fe/2673dd?text=Sport"
+                                        alt="Thể Thao & Du Lịch" class="category-img">
+                                </div>
+                                <span class="category-name">Thể Thao & Du Lịch</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fffaf2/ff9800?text=Motor"
+                                        alt="Ô Tô & Xe Máy & Xe Đạp" class="category-img">
+                                </div>
+                                <span class="category-name">Ô Tô & Xe Máy & Xe Đạp</span>
+                            </a>
+                        </li>
 
-            <!-- Khu vực Gợi ý hôm nay -->
-            <section class="daily-discover-section">
-                <h2>Gợi Ý Hôm Nay</h2>
-                <div class="product-grid">
-                    <article class="product-card">
-                        <h3>Áo Thun Nam Cotton Cao Cấp</h3>
-                        <p class="product-price">159.000₫</p>
-                    </article>
+                        <!-- Hàng 2: Từ ô 11 đến ô 20 -->
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fdf5f6/d0011b?text=Ao+Nu" alt="Thời Trang Nữ"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Thời Trang Nữ</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f2fcfb/00bfa5?text=Me+Be" alt="Mẹ & Bé"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Mẹ & Bé</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fff8f6/ee4d2d?text=Nha+Cua"
+                                        alt="Nhà Cửa & Đời Sống" class="category-img">
+                                </div>
+                                <span class="category-name">Nhà Cửa & Đời Sống</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/faf5fb/7b1fa2?text=Beauty" alt="Sắc Đẹp"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Sắc Đẹp</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f2f9f9/009688?text=Health" alt="Sức Khỏe"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Sức Khỏe</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fffaf2/ff9800?text=Giay+Nu" alt="Giày Dép Nữ"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Giày Dép Nữ</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fdf5f6/d0011b?text=Tui+Vi" alt="Túi Ví Nữ"
+                                        class="category-img">
+                                </div>
+                                <span class="category-name">Túi Ví Nữ</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f5f9fe/2673dd?text=Phu+Kien"
+                                        alt="Phụ Kiện & Trang Sức Nữ" class="category-img">
+                                </div>
+                                <span class="category-name">Phụ Kiện & Trang Sức Nữ</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/f2fcfb/00bfa5?text=Bach+Hoa"
+                                        alt="Bách Hóa Online" class="category-img">
+                                </div>
+                                <span class="category-name">Bách Hóa Online</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <div class="category-img-box">
+                                    <img src="https://placehold.co/120x120/fff8f6/ee4d2d?text=Book"
+                                        alt="Nhà Sách Online" class="category-img">
+                                </div>
+                                <span class="category-name">Nhà Sách Online</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Nút mũi tên trượt ngang sang trang danh mục tiếp theo -->
+                    <button class="category-arrow-btn" aria-label="Xem thêm danh mục">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
             </section>
+
+
+
+            <!-- Khu vực Flash Sale -->
+            <!-- Khu vực Flash Sale (Săn Sale Chớp Nhoáng) -->
+            <section class="flash-sale-section">
+
+                <!-- 1. Header của Flash Sale: Tiêu đề + Đồng hồ đếm ngược + Link Xem tất cả -->
+                <header class="section-header flash-sale-header">
+                    <div class="flash-sale-header-left">
+                        <!-- Logo chữ FLASH SALE kèm icon tia sét -->
+                        <div class="flash-sale-title">
+                            <span>F</span><i class="fa-solid fa-bolt-lightning flash-sale-bolt"></i><span>ASH
+                                SALE</span>
+                        </div>
+
+                        <!-- Đồng hồ đếm ngược (Countdown Timer: Giờ : Phút : Giây) -->
+                        <div class="flash-sale-countdown" aria-label="Thời gian còn lại">
+                            <span class="countdown-box">02</span>
+                            <span class="countdown-colon">:</span>
+                            <span class="countdown-box">15</span>
+                            <span class="countdown-colon">:</span>
+                            <span class="countdown-box">48</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="section-view-all">
+                        Xem tất cả <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </header>
+
+                <!-- 2. Lưới 6 Sản phẩm Flash Sale -->
+                <div class="flash-sale-body">
+                    <ul class="flash-sale-grid">
+
+                        <!-- Sản phẩm Flash Sale 1 (Có icon lửa rực cháy vì sắp cháy hàng: 88%) -->
+                        <li class="flash-sale-item">
+                            <a href="#" class="flash-sale-link">
+                                <div class="flash-sale-img-wrap">
+                                    <img src="https://placehold.co/300x300/ee4d2d/ffffff?text=Tai+Nghe+TWS"
+                                        alt="Tai nghe Bluetooth" class="flash-sale-img">
+                                    <!-- Nhãn % Giảm giá góc phải -->
+                                    <div class="discount-badge">
+                                        <i class="fa-solid fa-bolt"></i><span>-52%</span>
+                                    </div>
+                                    <!-- Nhãn Mall góc trái -->
+                                    <span class="mall-badge">Mall</span>
+                                </div>
+
+                                <div class="flash-sale-info">
+                                    <div class="flash-sale-price">
+                                        <span class="currency-symbol">₫</span>199.000
+                                    </div>
+
+                                    <!-- Thanh tiến trình 3 lớp kèm icon lửa -->
+                                    <div class="flash-sale-progress flash-sale-progress--hot">
+                                        <div class="flash-sale-progress-bar" style="width: 88%;"></div>
+                                        <span class="flash-sale-progress-text">SẮP CHÁY HÀNG</span>
+                                        <i class="fa-solid fa-fire-flame-curved flash-sale-fire-icon"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Sản phẩm Flash Sale 2 (Đã bán 65%) -->
+                        <li class="flash-sale-item">
+                            <a href="#" class="flash-sale-link">
+                                <div class="flash-sale-img-wrap">
+                                    <img src="https://placehold.co/300x300/00bfa5/ffffff?text=Sac+Du+Phong"
+                                        alt="Pin sạc dự phòng" class="flash-sale-img">
+                                    <div class="discount-badge">
+                                        <i class="fa-solid fa-bolt"></i><span>-40%</span>
+                                    </div>
+                                    <span class="mall-badge">Mall</span>
+                                </div>
+
+                                <div class="flash-sale-info">
+                                    <div class="flash-sale-price">
+                                        <span class="currency-symbol">₫</span>259.000
+                                    </div>
+                                    <div class="flash-sale-progress">
+                                        <div class="flash-sale-progress-bar" style="width: 65%;"></div>
+                                        <span class="flash-sale-progress-text">ĐANG BÁN CHẠY</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Sản phẩm Flash Sale 3 (Đã bán 45%) -->
+                        <li class="flash-sale-item">
+                            <a href="#" class="flash-sale-link">
+                                <div class="flash-sale-img-wrap">
+                                    <img src="https://placehold.co/300x300/2673dd/ffffff?text=Chuot+Gaming"
+                                        alt="Chuột không dây" class="flash-sale-img">
+                                    <div class="discount-badge">
+                                        <i class="fa-solid fa-bolt"></i><span>-35%</span>
+                                    </div>
+                                    <span class="favorite-badge">Yêu thích</span>
+                                </div>
+
+                                <div class="flash-sale-info">
+                                    <div class="flash-sale-price">
+                                        <span class="currency-symbol">₫</span>145.000
+                                    </div>
+                                    <div class="flash-sale-progress">
+                                        <div class="flash-sale-progress-bar" style="width: 45%;"></div>
+                                        <span class="flash-sale-progress-text">ĐÃ BÁN 42</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Sản phẩm Flash Sale 4 (Sắp cháy hàng: 92%) -->
+                        <li class="flash-sale-item">
+                            <a href="#" class="flash-sale-link">
+                                <div class="flash-sale-img-wrap">
+                                    <img src="https://placehold.co/300x300/ff9800/ffffff?text=Binh+Giu+Nhiet"
+                                        alt="Bình giữ nhiệt" class="flash-sale-img">
+                                    <div class="discount-badge">
+                                        <i class="fa-solid fa-bolt"></i><span>-60%</span>
+                                    </div>
+                                    <span class="favorite-badge">Yêu thích</span>
+                                </div>
+
+                                <div class="flash-sale-info">
+                                    <div class="flash-sale-price">
+                                        <span class="currency-symbol">₫</span>89.000
+                                    </div>
+                                    <div class="flash-sale-progress flash-sale-progress--hot">
+                                        <div class="flash-sale-progress-bar" style="width: 92%;"></div>
+                                        <span class="flash-sale-progress-text">SẮP CHÁY HÀNG</span>
+                                        <i class="fa-solid fa-fire-flame-curved flash-sale-fire-icon"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Sản phẩm Flash Sale 5 (Mới mở bán: 20%) -->
+                        <li class="flash-sale-item">
+                            <a href="#" class="flash-sale-link">
+                                <div class="flash-sale-img-wrap">
+                                    <img src="https://placehold.co/300x300/7b1fa2/ffffff?text=Bal%C3%B4+Laptop"
+                                        alt="Balo chống nước" class="flash-sale-img">
+                                    <div class="discount-badge">
+                                        <i class="fa-solid fa-bolt"></i><span>-48%</span>
+                                    </div>
+                                    <span class="mall-badge">Mall</span>
+                                </div>
+
+                                <div class="flash-sale-info">
+                                    <div class="flash-sale-price">
+                                        <span class="currency-symbol">₫</span>320.000
+                                    </div>
+                                    <div class="flash-sale-progress">
+                                        <div class="flash-sale-progress-bar" style="width: 20%;"></div>
+                                        <span class="flash-sale-progress-text">ĐANG BÁN CHẠY</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Sản phẩm Flash Sale 6 (Đã bán 75%) -->
+                        <li class="flash-sale-item">
+                            <a href="#" class="flash-sale-link">
+                                <div class="flash-sale-img-wrap">
+                                    <img src="https://placehold.co/300x300/d0011b/ffffff?text=Noi+Chien+KD"
+                                        alt="Nồi chiên không dầu" class="flash-sale-img">
+                                    <div class="discount-badge">
+                                        <i class="fa-solid fa-bolt"></i><span>-50%</span>
+                                    </div>
+                                    <span class="mall-badge">Mall</span>
+                                </div>
+
+                                <div class="flash-sale-info">
+                                    <div class="flash-sale-price">
+                                        <span class="currency-symbol">₫</span>990.000
+                                    </div>
+                                    <div class="flash-sale-progress">
+                                        <div class="flash-sale-progress-bar" style="width: 75%;"></div>
+                                        <span class="flash-sale-progress-text">ĐÃ BÁN 128</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- ================================================================= -->
+            <!-- CHƯƠNG 6: KHU VỰC DANH MỤC & BỘ LỌC TÌM KIẾM SẢN PHẨM (12 CỘT)    -->
+            <!-- ================================================================= -->
+            <section class="catalog-section">
+                <div class="app-content-grid">
+
+                    <!-- CỘT TRÁI (CHIẾM 2/12 CỘT): SIDEBAR DANH MỤC & BỘ LỌC TÌM KIẾM -->
+                    <aside class="sidebar-col">
+
+                        <!-- PHẦN 1: TẤT CẢ DANH MỤC -->
+                        <nav class="category-menu">
+                            <h3 class="sidebar-heading">
+                                <i class="sidebar-heading-icon fa-solid fa-list-ul"></i>
+                                Tất Cả Danh Mục
+                            </h3>
+                            <ul class="category-menu-list">
+                                <!-- Mục đang được chọn (Active) có mũi tên tam giác đỏ ở đầu -->
+                                <li class="category-menu-item category-menu-item--active">
+                                    <a href="#" class="category-menu-link">Máy Tính & Laptop</a>
+                                </li>
+                                <li class="category-menu-item">
+                                    <a href="#" class="category-menu-link">Bàn Phím Cơ Gaming</a>
+                                </li>
+                                <li class="category-menu-item">
+                                    <a href="#" class="category-menu-link">Màn Hình Máy Tính</a>
+                                </li>
+                                <li class="category-menu-item">
+                                    <a href="#" class="category-menu-link">Chuột & Lót Chuột</a>
+                                </li>
+                                <li class="category-menu-item">
+                                    <a href="#" class="category-menu-link">Linh Kiện Máy Tính (PC)</a>
+                                </li>
+                                <li class="category-menu-item">
+                                    <a href="#" class="category-menu-link">Laptop Gaming Đồ Họa</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- PHẦN 2: BỘ LỌC TÌM KIẾM ĐA TIÊU CHÍ -->
+                        <div class="search-filter">
+                            <h3 class="sidebar-heading sidebar-heading--filter">
+                                <i class="sidebar-heading-icon fa-solid fa-filter"></i>
+                                BỘ LỌC TÌM KIẾM
+                            </h3>
+
+                            <!-- Nhóm lọc 1: Nơi Bán (Sử dụng Custom Checkbox) -->
+                            <div class="filter-group">
+                                <h4 class="filter-group__title">Nơi Bán</h4>
+                                <ul class="filter-group__list">
+                                    <li class="filter-group__item">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" class="filter-checkbox__input" checked>
+                                            <span class="filter-checkbox__box">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            <span class="filter-checkbox__label">TP. Hồ Chí Minh</span>
+                                        </label>
+                                    </li>
+                                    <li class="filter-group__item">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" class="filter-checkbox__input">
+                                            <span class="filter-checkbox__box">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            <span class="filter-checkbox__label">Hà Nội</span>
+                                        </label>
+                                    </li>
+                                    <li class="filter-group__item">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" class="filter-checkbox__input">
+                                            <span class="filter-checkbox__box">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            <span class="filter-checkbox__label">Đà Nẵng</span>
+                                        </label>
+                                    </li>
+                                    <li class="filter-group__item">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" class="filter-checkbox__input">
+                                            <span class="filter-checkbox__box">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            <span class="filter-checkbox__label">Nước Ngoài</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Nhóm lọc 2: Đơn Vị Vận Chuyển -->
+                            <div class="filter-group">
+                                <h4 class="filter-group__title">Đơn Vị Vận Chuyển</h4>
+                                <ul class="filter-group__list">
+                                    <li class="filter-group__item">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" class="filter-checkbox__input" checked>
+                                            <span class="filter-checkbox__box">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            <span class="filter-checkbox__label">Hỏa Tốc</span>
+                                        </label>
+                                    </li>
+                                    <li class="filter-group__item">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" class="filter-checkbox__input">
+                                            <span class="filter-checkbox__box">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            <span class="filter-checkbox__label">Nhanh</span>
+                                        </label>
+                                    </li>
+                                    <li class="filter-group__item">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" class="filter-checkbox__input">
+                                            <span class="filter-checkbox__box">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            <span class="filter-checkbox__label">Tiết Kiệm</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Nhóm lọc 3: Khoảng Giá (Từ ... Đến ...) -->
+                            <div class="filter-group">
+                                <h4 class="filter-group__title">Khoảng Giá</h4>
+                                <div class="filter-price-range">
+                                    <input type="text" class="filter-price-input" placeholder="₫ TỪ">
+                                    <span class="filter-price-line"></span>
+                                    <input type="text" class="filter-price-input" placeholder="₫ ĐẾN">
+                                </div>
+                                <button class="btn btn--primary filter-price-btn">ÁP DỤNG</button>
+                            </div>
+
+                            <!-- Nhóm lọc 4: Đánh Giá (Từ 5 sao -> 1 sao) -->
+                            <div class="filter-group">
+                                <h4 class="filter-group__title">Đánh Giá</h4>
+                                <ul class="filter-rating-list">
+                                    <!-- Mục 5 sao -->
+                                    <li class="filter-rating-item filter-rating-item--active">
+                                        <div class="filter-stars">
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                        </div>
+                                    </li>
+                                    <!-- Mục 4 sao trở lên -->
+                                    <li class="filter-rating-item">
+                                        <div class="filter-stars">
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-regular fa-star star--empty"></i>
+                                        </div>
+                                        <span class="filter-rating-text">trở lên</span>
+                                    </li>
+                                    <!-- Mục 3 sao trở lên -->
+                                    <li class="filter-rating-item">
+                                        <div class="filter-stars">
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-solid fa-star star--gold"></i>
+                                            <i class="fa-regular fa-star star--empty"></i>
+                                            <i class="fa-regular fa-star star--empty"></i>
+                                        </div>
+                                        <span class="filter-rating-text">trở lên</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Nút Xóa Tất Cả Bộ Lọc -->
+                            <button class="btn btn--primary filter-clear-all-btn">XÓA TẤT CẢ</button>
+
+                        </div>
+
+                    </aside>
+
+                    <!-- CỘT PHẢI (CHIẾM 10/12 CỘT): THANH SẮP XẾP & LƯỚI 5 SẢN PHẨM (Sẽ hoàn thiện ở Bài 19) -->
+                    <!-- CỘT PHẢI (CHIẾM 10/12 CỘT): THANH SẮP XẾP, LƯỚI 5 SẢN PHẨM & PHÂN TRANG -->
+                    <div class="main-product-col">
+
+                        <!-- 1. THANH SẮP XẾP & LỌC NHANH (HOME FILTER / SORT BAR) -->
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn btn--primary">Phổ biến</button>
+                            <button class="home-filter__btn btn">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+
+                            <!-- Hộp Custom Select Dropdown chọn Giá -->
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fa-solid fa-chevron-down"></i>
+
+                                <!-- Danh sách tùy chọn xổ xuống khi Hover -->
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Thấp đến Cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Cao đến Thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Cụm chuyển trang mini (Đẩy sát sang phải bằng margin-left: auto) -->
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>/14
+                                </span>
+
+                                <div class="home-filter__page-control">
+                                    <!-- Nút lùi trang (Đang ở trang 1 nên bị vô hiệu hóa --disabled) -->
+                                    <a href="#" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                        <i class="home-filter__page-icon fa-solid fa-chevron-left"></i>
+                                    </a>
+                                    <!-- Nút tiến sang trang 2 -->
+                                    <a href="#" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. LƯỚI 5 SẢN PHẨM / HÀNG (DÀNH RIÊNG CHO KHUNG 10 CỘT) -->
+                        <div class="catalog-product-grid">
+
+                            <!-- Sản phẩm 1 (Bản nâng cấp đầy đủ Giá gốc gạch ngang + Sao + Nơi bán) -->
+                            <article class="product-card">
+                                <a href="#" class="product-card__link">
+                                    <div class="product-card__img-wrap">
+                                        <img src="https://placehold.co/300x300/ee4d2d/ffffff?text=MacBook+Air+M3"
+                                            alt="MacBook Air M3" class="product-card__img">
+                                    </div>
+                                    <div class="product-card__favourite product-card__favourite--mall">
+                                        <span>Mall</span>
+                                    </div>
+                                    <div class="product-card__sale-off">
+                                        <span class="product-card__sale-off-percent">-18%</span>
+                                    </div>
+
+                                    <div class="product-card__body">
+                                        <h3 class="product-card__name">Apple MacBook Air 13 inch M3 2024 (8GB RAM |
+                                            256GB SSD) Chính Hãng Apple Việt Nam</h3>
+
+                                        <!-- Dòng Giá gốc gạch ngang + Giá khuyến mãi -->
+                                        <div class="product-card__price-row">
+                                            <span class="product-card__price-old">₫27.990.000</span>
+                                            <span class="product-card__price-current">₫22.990.000</span>
+                                        </div>
+
+                                        <!-- Dòng Đánh giá 5 sao + Đã bán -->
+                                        <div class="product-card__action">
+                                            <div class="product-card__rating">
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                            </div>
+                                            <span class="product-card__sold">Đã bán 1,2k</span>
+                                        </div>
+
+                                        <!-- Dòng Thương hiệu & Tỉnh/Thành phố nơi bán -->
+                                        <div class="product-card__origin">
+                                            <span class="product-card__brand">Apple Flagship</span>
+                                            <span class="product-card__origin-name">TP. Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                            </article>
+
+                            <!-- Sản phẩm 2 -->
+                            <article class="product-card">
+                                <a href="#" class="product-card__link">
+                                    <div class="product-card__img-wrap">
+                                        <img src="https://placehold.co/300x300/2673dd/ffffff?text=Laptop+ASUS+TUF"
+                                            alt="Laptop Gaming ASUS" class="product-card__img">
+                                    </div>
+                                    <div class="product-card__favourite">
+                                        <i class="fa-solid fa-check"></i><span>Yêu thích</span>
+                                    </div>
+                                    <div class="product-card__sale-off">
+                                        <span class="product-card__sale-off-percent">-22%</span>
+                                    </div>
+
+                                    <div class="product-card__body">
+                                        <h3 class="product-card__name">Laptop Gaming ASUS TUF A15 FA506NF-HN005W (Ryzen
+                                            5 7535HS / RTX 2050 / 16GB / 512GB / 144Hz)</h3>
+                                        <div class="product-card__price-row">
+                                            <span class="product-card__price-old">₫21.490.000</span>
+                                            <span class="product-card__price-current">₫16.790.000</span>
+                                        </div>
+                                        <div class="product-card__action">
+                                            <div class="product-card__rating">
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                            </div>
+                                            <span class="product-card__sold">Đã bán 845</span>
+                                        </div>
+                                        <div class="product-card__origin">
+                                            <span class="product-card__brand">ASUS</span>
+                                            <span class="product-card__origin-name">Hà Nội</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                            </article>
+
+                            <!-- Sản phẩm 3 -->
+                            <article class="product-card">
+                                <a href="#" class="product-card__link">
+                                    <div class="product-card__img-wrap">
+                                        <img src="https://placehold.co/300x300/00bfa5/ffffff?text=Ban+Phim+Keychron"
+                                            alt="Bàn phím Keychron" class="product-card__img">
+                                    </div>
+                                    <div class="product-card__favourite product-card__favourite--mall">
+                                        <span>Mall</span>
+                                    </div>
+                                    <div class="product-card__sale-off">
+                                        <span class="product-card__sale-off-percent">-15%</span>
+                                    </div>
+
+                                    <div class="product-card__body">
+                                        <h3 class="product-card__name">Bàn phím cơ Bluetooth Keychron K2 Pro QMK/VIA
+                                            Khung Nhôm Hotswap</h3>
+                                        <div class="product-card__price-row">
+                                            <span class="product-card__price-old">₫2.690.000</span>
+                                            <span class="product-card__price-current">₫2.290.000</span>
+                                        </div>
+                                        <div class="product-card__action">
+                                            <div class="product-card__rating">
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                            </div>
+                                            <span class="product-card__sold">Đã bán 2,3k</span>
+                                        </div>
+                                        <div class="product-card__origin">
+                                            <span class="product-card__brand">Keychron</span>
+                                            <span class="product-card__origin-name">TP. Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                            </article>
+
+                            <!-- Sản phẩm 4 -->
+                            <article class="product-card">
+                                <a href="#" class="product-card__link">
+                                    <div class="product-card__img-wrap">
+                                        <img src="https://placehold.co/300x300/ff9800/ffffff?text=SSD+Samsung+990"
+                                            alt="Ổ cứng SSD Samsung" class="product-card__img">
+                                    </div>
+                                    <div class="product-card__favourite">
+                                        <i class="fa-solid fa-check"></i><span>Yêu thích+</span>
+                                    </div>
+                                    <div class="product-card__sale-off">
+                                        <span class="product-card__sale-off-percent">-30%</span>
+                                    </div>
+
+                                    <div class="product-card__body">
+                                        <h3 class="product-card__name">Ổ cứng SSD M.2 PCIe Gen4 x4 NVMe Samsung 990 PRO
+                                            1TB Đọc 7450MB/s</h3>
+                                        <div class="product-card__price-row">
+                                            <span class="product-card__price-old">₫3.450.000</span>
+                                            <span class="product-card__price-current">₫2.415.000</span>
+                                        </div>
+                                        <div class="product-card__action">
+                                            <div class="product-card__rating">
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                            </div>
+                                            <span class="product-card__sold">Đã bán 5,1k</span>
+                                        </div>
+                                        <div class="product-card__origin">
+                                            <span class="product-card__brand">Samsung</span>
+                                            <span class="product-card__origin-name">TP. Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                            </article>
+
+                            <!-- Sản phẩm 5 -->
+                            <article class="product-card">
+                                <a href="#" class="product-card__link">
+                                    <div class="product-card__img-wrap">
+                                        <img src="https://placehold.co/300x300/7b1fa2/ffffff?text=Chuot+Razer+V3"
+                                            alt="Chuột Gaming Razer" class="product-card__img">
+                                    </div>
+                                    <div class="product-card__favourite product-card__favourite--mall">
+                                        <span>Mall</span>
+                                    </div>
+                                    <div class="product-card__sale-off">
+                                        <span class="product-card__sale-off-percent">-26%</span>
+                                    </div>
+
+                                    <div class="product-card__body">
+                                        <h3 class="product-card__name">Chuột Gaming không dây siêu nhẹ Razer Viper V3
+                                            HyperSpeed</h3>
+                                        <div class="product-card__price-row">
+                                            <span class="product-card__price-old">₫2.190.000</span>
+                                            <span class="product-card__price-current">₫1.620.000</span>
+                                        </div>
+                                        <div class="product-card__action">
+                                            <div class="product-card__rating">
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                                <i class="fa-solid fa-star star--gold"></i>
+                                            </div>
+                                            <span class="product-card__sold">Đã bán 1,9k</span>
+                                        </div>
+                                        <div class="product-card__origin">
+                                            <span class="product-card__brand">Razer</span>
+                                            <span class="product-card__origin-name">Nước Ngoài</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                            </article>
+
+                        </div>
+
+                        <!-- 3. THANH PHÂN TRANG DƯỚI ĐÁY (PAGINATION UI) -->
+                        <ul class="pagination catalog-pagination">
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link" aria-label="Trang trước">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <!-- Trang số 1 đang Active -->
+                            <li class="pagination-item pagination-item--active">
+                                <a href="#" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <span class="pagination-item__link pagination-item__dots">...</span>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">14</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link" aria-label="Trang tiếp theo">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!-- ================================================================= -->
+            <!-- CHƯƠNG 7: GIAO DIỆN CHI TIẾT SẢN PHẨM (PRODUCT DETAIL PAGE - PDP) -->
+            <!-- ================================================================= -->
+            <section class="product-detail-section">
+
+                <!-- 1. Thanh đường dẫn Breadcrumb dẫn hướng -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="#" class="breadcrumb__link">Shopee</a>
+                    <i class="breadcrumb__icon fa-solid fa-chevron-right"></i>
+                    <a href="#" class="breadcrumb__link">Máy Tính & Laptop</a>
+                    <i class="breadcrumb__icon fa-solid fa-chevron-right"></i>
+                    <a href="#" class="breadcrumb__link">Phụ Kiện Máy Tính</a>
+                    <i class="breadcrumb__icon fa-solid fa-chevron-right"></i>
+                    <span class="breadcrumb__current">Bàn phím cơ không dây AULA F75 Pro 3 Mode Hotswap</span>
+                </nav>
+
+                <!-- 2. Khung trắng chính chia 2 cột: Thư viện ảnh (Trái) & Thông tin mua hàng (Phải) -->
+                <div class="product-briefing">
+
+                    <!-- CỘT TRÁI (450PX): THƯ VIỆN ẢNH SẢN PHẨM (PRODUCT GALLERY) -->
+                    <div class="product-gallery">
+                        <!-- Khung ảnh lớn 1:1 -->
+                        <div class="product-gallery__main">
+                            <img src="https://placehold.co/600x600/ee4d2d/ffffff?text=AULA+F75+PRO+(Main+View)"
+                                alt="Bàn phím cơ AULA F75 Pro" class="product-gallery__main-img">
+                        </div>
+
+                        <!-- Dãy 5 ảnh Thumbnail nhỏ bên dưới -->
+                        <ul class="product-gallery__thumbs">
+                            <li class="product-gallery__thumb-item product-gallery__thumb-item--active">
+                                <img src="https://placehold.co/150x150/ee4d2d/ffffff?text=Goc+1" alt="Góc chụp 1"
+                                    class="product-gallery__thumb-img">
+                            </li>
+                            <li class="product-gallery__thumb-item">
+                                <img src="https://placehold.co/150x150/00bfa5/ffffff?text=Switch" alt="Reaper Switch"
+                                    class="product-gallery__thumb-img">
+                            </li>
+                            <li class="product-gallery__thumb-item">
+                                <img src="https://placehold.co/150x150/2673dd/ffffff?text=LED+RGB" alt="Đèn LED RGB"
+                                    class="product-gallery__thumb-img">
+                            </li>
+                            <li class="product-gallery__thumb-item">
+                                <img src="https://placehold.co/150x150/ff9800/ffffff?text=Keycap" alt="Keycap PBT"
+                                    class="product-gallery__thumb-img">
+                            </li>
+                            <li class="product-gallery__thumb-item">
+                                <img src="https://placehold.co/150x150/7b1fa2/ffffff?text=Full+Box"
+                                    alt="Phụ kiện trong hộp" class="product-gallery__thumb-img">
+                            </li>
+                        </ul>
+
+                        <!-- Dòng Chia sẻ mạng xã hội & Đã thích ở đáy cột ảnh -->
+                        <div class="product-gallery__share">
+                            <div class="product-share-social">
+                                <span>Chia sẻ:</span>
+                                <a href="#" class="share-icon share-icon--fm"><i
+                                        class="fa-brands fa-facebook-messenger"></i></a>
+                                <a href="#" class="share-icon share-icon--fb"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="share-icon share-icon--pi"><i class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                            <div class="product-like-btn">
+                                <i class="fa-regular fa-heart product-like-icon"></i>
+                                <span>Đã thích (3,4k)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CỘT PHẢI (FLEX: 1): THÔNG TIN CHI TIẾT, PHÂN LOẠI & CHỐT ĐƠN -->
+                    <div class="product-summary">
+
+                        <!-- Tên sản phẩm kèm nhãn Yêu Thích ở ngay đầu dòng -->
+                        <h1 class="product-summary__title">
+                            <span class="product-summary__badge">Yêu thích+</span>
+                            Bàn phím cơ không dây AULA F75 Pro 3 Mode (Bluetooth / 2.4G / Type-C) Mạch Xuôi Hotswap 5
+                            Pin Đèn LED RGB 16.8 Triệu Màu
+                        </h1>
+
+                        <!-- Dải thông số: Điểm sao | Đánh giá | Đã bán -->
+                        <div class="product-summary__metrics">
+                            <div class="metric-item">
+                                <span class="metric-rating-score">4.9</span>
+                                <div class="metric-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-count">1,2k</span>
+                                <span class="metric-label">Đánh Giá</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-count">4,5k</span>
+                                <span class="metric-label">Đã Bán</span>
+                            </div>
+                            <a href="#" class="metric-report">Tố cáo</a>
+                        </div>
+
+                        <!-- Khung Giá bán nền xám nhạt kèm Nhãn giảm giá -->
+                        <div class="product-summary__price-box">
+                            <span class="summary-price-old">₫1.390.000</span>
+                            <span class="summary-price-current">₫850.000</span>
+                            <span class="summary-price-discount">39% GIẢM</span>
+                        </div>
+
+                        <!-- Khu vực các dòng thuộc tính chọn lựa (Dùng Grid 2 cột: Nhãn 110px + Nội dung 1fr) -->
+                        <div class="product-summary__options">
+
+                            <!-- Dòng 1: Mã giảm giá của Shop -->
+                            <div class="option-row">
+                                <span class="option-label">Mã Giảm Giá Của Shop</span>
+                                <div class="option-content">
+                                    <span class="mini-voucher">Giảm ₫30k</span>
+                                    <span class="mini-voucher">Giảm ₫50k</span>
+                                    <span class="mini-voucher">Giảm 10%</span>
+                                </div>
+                            </div>
+
+                            <!-- Dòng 2: Vận chuyển -->
+                            <div class="option-row">
+                                <span class="option-label">Vận Chuyển</span>
+                                <div class="option-content shipping-info">
+                                    <i class="fa-solid fa-truck-fast shipping-icon"></i>
+                                    <div>
+                                        <p class="shipping-free-title">Miễn phí vận chuyển</p>
+                                        <p class="shipping-free-sub">Miễn phí vận chuyển cho đơn hàng trên ₫0</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dòng 3: Chọn Màu Sắc (Dùng Radio Hack để bấm đổi nút có Góc Tích 3D!) -->
+                            <div class="option-row">
+                                <span class="option-label">Màu Sắc</span>
+                                <div class="option-content variation-list">
+                                    <!-- Lựa chọn 1 (Đang được chọn mặc định) -->
+                                    <label class="variation-item">
+                                        <input type="radio" name="product-color" class="variation-input" checked>
+                                        <span class="variation-btn">Trắng Xanh (Ice Vein)</span>
+                                    </label>
+                                    <!-- Lựa chọn 2 -->
+                                    <label class="variation-item">
+                                        <input type="radio" name="product-color" class="variation-input">
+                                        <span class="variation-btn">Đen Vàng (Reaper Switch)</span>
+                                    </label>
+                                    <!-- Lựa chọn 3 -->
+                                    <label class="variation-item">
+                                        <input type="radio" name="product-color" class="variation-input">
+                                        <span class="variation-btn">Tím Hồng Pastel</span>
+                                    </label>
+                                    <!-- Lựa chọn 4 (Hết hàng - Disabled) -->
+                                    <label class="variation-item">
+                                        <input type="radio" name="product-color" class="variation-input" disabled>
+                                        <span class="variation-btn variation-btn--disabled">Xanh Matcha (Hết)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Dòng 4: Chọn Số Lượng (Quantity Stepper) -->
+                            <div class="option-row">
+                                <span class="option-label">Số Lượng</span>
+                                <div class="option-content quantity-row">
+                                    <div class="quantity-stepper">
+                                        <button type="button" class="quantity-btn" aria-label="Giảm số lượng">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input type="text" class="quantity-input" value="1" aria-label="Số lượng mua">
+                                        <button type="button" class="quantity-btn" aria-label="Tăng số lượng">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <span class="stock-available">482 sản phẩm có sẵn</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Cụm 2 Nút Hành Động Chốt Đơn: Thêm Vào Giỏ Hàng & Mua Ngay -->
+                        <div class="product-summary__actions">
+                            <button type="button" class="btn btn-add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Thêm Vào Giỏ Hàng</span>
+                            </button>
+                            <button type="button" class="btn btn--primary btn-buy-now">
+                                Mua Ngay
+                            </button>
+                        </div>
+
+                        <!-- Dải cam kết Shopee Đảm Bảo ở dưới đáy -->
+                        <div class="product-summary__guarantee">
+                            <div class="guarantee-item">
+                                <i class="fa-solid fa-Rotate-left guarantee-icon"></i>
+                                <span>Trả hàng miễn phí 15 ngày</span>
+                            </div>
+                            <div class="guarantee-item">
+                                <i class="fa-solid fa-shield-heart guarantee-icon"></i>
+                                <span>Chính hãng 100%</span>
+                            </div>
+                            <div class="guarantee-item">
+                                <i class="fa-solid fa-truck guarantee-icon"></i>
+                                <span>Miễn phí vận chuyển</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3. KHUNG THÔNG TIN GIAN HÀNG (SHOP INFO BAR - BÀI 21) -->
+                <div class="shop-info-bar">
+
+                    <!-- Cụm Trái: Avatar + Tên Shop + 2 Nút Hành Động -->
+                    <div class="shop-info__left">
+                        <a href="#" class="shop-avatar">
+                            <img src="https://placehold.co/160x160/ee4d2d/ffffff?text=AULA+VN" alt="AULA Official Store"
+                                class="shop-avatar__img">
+                            <span class="shop-avatar__badge">Yêu thích+</span>
+                        </a>
+
+                        <div class="shop-profile">
+                            <h2 class="shop-profile__name">AULA Official Store VN</h2>
+                            <p class="shop-profile__status">
+                                <span class="status-dot"></span> Online 4 phút trước
+                            </p>
+
+                            <div class="shop-profile__actions">
+                                <button type="button" class="btn shop-btn shop-btn--chat">
+                                    <i class="fa-regular fa-message"></i>
+                                    <span>Chat Ngay</span>
+                                </button>
+                                <a href="#" class="btn shop-btn shop-btn--view">
+                                    <i class="fa-solid fa-store"></i>
+                                    <span>Xem Shop</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cụm Phải: Lưới 3 cột x 2 hàng thống kê chỉ số uy tín của Shop -->
+                    <div class="shop-info__right">
+                        <div class="shop-metric-item">
+                            <span class="shop-metric__label">Đánh Giá</span>
+                            <span class="shop-metric__value">48,6k</span>
+                        </div>
+                        <div class="shop-metric-item">
+                            <span class="shop-metric__label">Tỷ Lệ Phản Hồi</span>
+                            <span class="shop-metric__value">99%</span>
+                        </div>
+                        <div class="shop-metric-item">
+                            <span class="shop-metric__label">Tham Gia</span>
+                            <span class="shop-metric__value">4 năm trước</span>
+                        </div>
+                        <div class="shop-metric-item">
+                            <span class="shop-metric__label">Sản Phẩm</span>
+                            <span class="shop-metric__value">185</span>
+                        </div>
+                        <div class="shop-metric-item">
+                            <span class="shop-metric__label">Thời Gian Phản Hồi</span>
+                            <span class="shop-metric__value">trong vài phút</span>
+                        </div>
+                        <div class="shop-metric-item">
+                            <span class="shop-metric__label">Người Theo Dõi</span>
+                            <span class="shop-metric__value">142,8k</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4. KHUNG CHI TIẾT THÔNG SỐ & MÔ TẢ SẢN PHẨM (PRODUCT CONTENT LAYOUT) -->
+                <div class="product-content-layout">
+
+                    <!-- Cột chính bên trái (Chiếm phần lớn diện tích): Thông số & Bài viết mô tả -->
+                    <div class="product-content__main">
+
+                        <!-- PHẦN A: BẢNG CHI TIẾT SẢN PHẨM (SPECIFICATIONS) -->
+                        <section class="product-specs-section">
+                            <h2 class="product-section-heading">CHI TIẾT SẢN PHẨM</h2>
+
+                            <dl class="specs-list">
+                                <div class="specs-row">
+                                    <dt class="specs-term">Danh Mục</dt>
+                                    <dd class="specs-detail">
+                                        <a href="#" class="specs-link">Shopee</a> >
+                                        <a href="#" class="specs-link">Máy Tính & Laptop</a> >
+                                        <a href="#" class="specs-link">Phụ Kiện Máy Tính</a> >
+                                        <a href="#" class="specs-link">Bàn Phím</a>
+                                    </dd>
+                                </div>
+                                <div class="specs-row">
+                                    <dt class="specs-term">Thương hiệu</dt>
+                                    <dd class="specs-detail"><a href="#" class="specs-link">AULA</a></dd>
+                                </div>
+                                <div class="specs-row">
+                                    <dt class="specs-term">Kiểu kết nối</dt>
+                                    <dd class="specs-detail">3 Mode (Không dây Bluetooth 5.0 / Receiver 2.4GHz / Có dây
+                                        Type-C)</dd>
+                                </div>
+                                <div class="specs-row">
+                                    <dt class="specs-term">Bàn phím cơ</dt>
+                                    <dd class="specs-detail">Có (Mạch xuôi Hotswap 5 Pin + Cấu trúc Gasket Mount 5 lớp
+                                        tiêu âm)</dd>
+                                </div>
+                                <div class="specs-row">
+                                    <dt class="specs-term">Hạn bảo hành</dt>
+                                    <dd class="specs-detail">12 tháng</dd>
+                                </div>
+                                <div class="specs-row">
+                                    <dt class="specs-term">Loại bảo hành</dt>
+                                    <dd class="specs-detail">Bảo hành nhà cung cấp (Đổi mới trong 15 ngày đầu)</dd>
+                                </div>
+                                <div class="specs-row">
+                                    <dt class="specs-term">Kho hàng</dt>
+                                    <dd class="specs-detail">482</dd>
+                                </div>
+                                <div class="specs-row">
+                                    <dt class="specs-term">Gửi từ</dt>
+                                    <dd class="specs-detail">TP. Hồ Chí Minh</dd>
+                                </div>
+                            </dl>
+                        </section>
+
+                        <!-- PHẦN B: BÀI VIẾT MÔ TẢ SẢN PHẨM (DESCRIPTION) -->
+                        <section class="product-desc-section">
+                            <h2 class="product-section-heading">MÔ TẢ SẢN PHẨM</h2>
+
+                            <div class="product-desc-content">
+                                <p class="product-desc-text">🔥 BÀN PHÍM CƠ KHÔNG DÂY AULA F75 PRO - ĐỈNH CAO CUSTOM
+                                    TRONG TẦM GIÁ!
+
+                                    Bàn phím cơ AULA F75 Pro là phiên bản nâng cấp toàn diện với mạch xuôi (South-facing
+                                    LED) giúp không bị cấn keycap Cherry Profile và mang lại hiệu ứng ánh sáng RGB rực
+                                    rỡ hơn bao giờ hết.
+
+                                    ✨ ĐẶC ĐIỂM NỔI BẬT:
+                                    - Cấu trúc Gasket Mount cao cấp kèm 5 lớp Foam tiêu âm (Foam PCB Poron, IXPE Switch
+                                    Pad, PET Pad, Foam đáy Silicone) cho âm gõ "Thocky / Creamy" cực kỳ êm tai ngay khi
+                                    mở hộp mà không cần độ chế.
+                                    - Kết nối 3 chế độ linh hoạt: Bluetooth 5.0 (kết nối tối đa 3 thiết bị), USB 2.4GHz
+                                    tốc độ phản hồi 1ms chuyên trị Game FPS, và cáp rời USB Type-C.
+                                    - Núm xoay CNC đa năng ở góc phải: Dễ dàng chỉnh âm lượng hoặc độ sáng đèn LED chỉ
+                                    với 1 thao tác xoay.
+                                    - Pin dung lượng khủng 4000mAh: Thời lượng sử dụng lên tới 2-3 tuần khi tắt LED.
+
+                                    📦 BỘ SẢN PHẨM BAO GỒM:
+                                    01 x Bàn phím cơ AULA F75 Pro
+                                    01 x Dây cáp bọc dù USB Type-C
+                                    01 x Dụng cụ nhổ Keycap / Switch 2 trong 1
+                                    02 x Switch dự phòng đi kèm + Nắp che bụi</p>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <!-- Cột phụ bên phải (230px): Top Sản Phẩm Bán Chạy Của Shop -->
+                    <aside class="product-content__sidebar">
+                        <h3 class="sidebar-top-picks__heading">Top Sản Phẩm Bán Chạy</h3>
+
+                        <div class="sidebar-top-picks__list">
+                            <!-- Sản phẩm gợi ý 1 -->
+                            <a href="#" class="top-pick-item">
+                                <img src="https://placehold.co/200x200/00bfa5/ffffff?text=Chuot+AULA+SC580"
+                                    alt="Chuột AULA" class="top-pick-item__img">
+                                <h4 class="top-pick-item__name">Chuột Gaming Không Dây AULA SC580 3 Mode Siêu Nhẹ</h4>
+                                <span class="top-pick-item__price">₫389.000</span>
+                            </a>
+                            <!-- Sản phẩm gợi ý 2 -->
+                            <a href="#" class="top-pick-item">
+                                <img src="https://placehold.co/200x200/ff9800/ffffff?text=Keycap+PBT+Bo+Tron"
+                                    alt="Bộ Keycap" class="top-pick-item__img">
+                                <h4 class="top-pick-item__name">Bộ Keycap PBT Dye-Sub Xuyên LED XDA Profile 128 Phím
+                                </h4>
+                                <span class="top-pick-item__price">₫195.000</span>
+                            </a>
+                        </div>
+                    </aside>
+
+                </div>
+
+
+            </section>
+
+
+
+
+
+            <!-- Khu vực Gợi ý hôm nay -->
+            <!-- CHƯƠNG 4: KHU VỰC GỢI Ý HÔM NAY (DAILY DISCOVER) -->
+            <section class="daily-discover-section">
+
+                <!-- 1. Thanh tiêu đề "GỢI Ý HÔM NAY" bám dính dưới đáy Header khi cuộn -->
+                <div class="daily-discover-header">
+                    <h2 class="daily-discover-title">GỢI Ý HÔM NAY</h2>
+                </div>
+
+                <!-- 2. Lưới 6 cột chứa danh sách Thẻ Sản Phẩm (Master Product Cards) -->
+                <div class="product-grid">
+
+                    <!-- SẢN PHẨM 1: Đầy đủ Nhãn Yêu Thích + Giảm giá + Tag Khung Giờ Săn Sale -->
+                    <article class="product-card">
+                        <a href="#" class="product-card__link">
+                            <!-- Khung ảnh vuông 1:1 -->
+                            <div class="product-card__img-wrap">
+                                <img src="https://placehold.co/300x300/ee4d2d/ffffff?text=Ban+Phim+Co+F75"
+                                    alt="Bàn phím cơ AULA F75" class="product-card__img">
+                            </div>
+
+                            <!-- Nhãn Yêu thích có nếp gấp 3D (Đặt ngoài img-wrap để nhô ra -4px không bị cắt) -->
+                            <div class="product-card__favourite">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Yêu thích</span>
+                            </div>
+
+                            <!-- Nhãn % Giảm giá góc phải -->
+                            <div class="product-card__sale-off">
+                                <span class="product-card__sale-off-percent">-38%</span>
+                            </div>
+
+                            <!-- Phần thân chứa Thông tin sản phẩm -->
+                            <div class="product-card__body">
+                                <h3 class="product-card__name">Bàn phím cơ không dây AULA F75 Pro 3 Mode Mạch Xuôi
+                                    Hotswap LED RGB</h3>
+
+                                <!-- Các nhãn khuyến mãi nhỏ dưới tên (Voucher / Rẻ Vô Địch) -->
+                                <div class="product-card__tags">
+                                    <span class="product-tag product-tag--outline">Rẻ Vô Địch</span>
+                                    <span class="product-tag product-tag--fill">Giảm ₫50k</span>
+                                </div>
+
+                                <!-- Dòng đáy: Giá tiền (Trái) + Đã bán (Phải) -->
+                                <div class="product-card__footer">
+                                    <div class="product-card__price">
+                                        <span class="currency-symbol">₫</span>850.000
+                                    </div>
+                                    <div class="product-card__sold">Đã bán 4,2k</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Thanh "Tìm sản phẩm tương tự" (Hiện lơ lửng dưới đáy khi Hover) -->
+                        <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                    </article>
+
+                    <!-- SẢN PHẨM 2: Nhãn Shopee Mall Đỏ (Nếp gấp 3D tự động đổi sang đỏ sẫm!) -->
+                    <article class="product-card">
+                        <a href="#" class="product-card__link">
+                            <div class="product-card__img-wrap">
+                                <img src="https://placehold.co/300x300/d0011b/ffffff?text=Man+Hinh+LG+27"
+                                    alt="Màn hình LG UltraGear" class="product-card__img">
+                            </div>
+
+                            <!-- Thêm modifier --mall để đổi sang màu đỏ Shopee Mall -->
+                            <div class="product-card__favourite product-card__favourite--mall">
+                                <span>Mall</span>
+                            </div>
+
+                            <div class="product-card__sale-off">
+                                <span class="product-card__sale-off-percent">-25%</span>
+                            </div>
+
+                            <div class="product-card__body">
+                                <h3 class="product-card__name">Màn hình Gaming LG UltraGear 27GS60F-B 27 inch FHD IPS
+                                    180Hz 1ms</h3>
+
+                                <div class="product-card__tags">
+                                    <span class="product-tag product-tag--outline">Trả góp 0%</span>
+                                </div>
+
+                                <div class="product-card__footer">
+                                    <div class="product-card__price">
+                                        <span class="currency-symbol">₫</span>3.890.000
+                                    </div>
+                                    <div class="product-card__sold">Đã bán 1,8k</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                    </article>
+
+                    <!-- SẢN PHẨM 3: Tên ngắn 1 dòng (Kiểm tra giữ thẳng hàng đáy thẻ!) -->
+                    <article class="product-card">
+                        <a href="#" class="product-card__link">
+                            <div class="product-card__img-wrap">
+                                <img src="https://placehold.co/300x300/00bfa5/ffffff?text=Ao+Thun+Cotton"
+                                    alt="Áo thun nam" class="product-card__img">
+                            </div>
+
+                            <div class="product-card__favourite">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Yêu thích+</span>
+                            </div>
+
+                            <div class="product-card__sale-off">
+                                <span class="product-card__sale-off-percent">-50%</span>
+                            </div>
+
+                            <div class="product-card__body">
+                                <!-- Cố tình đặt tên thật ngắn chỉ 1 dòng để test chiều cao cố định 3.6rem -->
+                                <h3 class="product-card__name">Áo Thun Nam Basic</h3>
+
+                                <div class="product-card__tags">
+                                    <span class="product-tag product-tag--fill">Mua Kèm Deal Sốc</span>
+                                </div>
+
+                                <div class="product-card__footer">
+                                    <div class="product-card__price">
+                                        <span class="currency-symbol">₫</span>99.000
+                                    </div>
+                                    <div class="product-card__sold">Đã bán 15,6k</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                    </article>
+
+                    <!-- SẢN PHẨM 4 -->
+                    <article class="product-card">
+                        <a href="#" class="product-card__link">
+                            <div class="product-card__img-wrap">
+                                <img src="https://placehold.co/300x300/2673dd/ffffff?text=Chuot+Logitech"
+                                    alt="Chuột không dây Logitech" class="product-card__img">
+                            </div>
+
+                            <div class="product-card__favourite product-card__favourite--mall">
+                                <span>Mall</span>
+                            </div>
+
+                            <div class="product-card__sale-off">
+                                <span class="product-card__sale-off-percent">-32%</span>
+                            </div>
+
+                            <div class="product-card__body">
+                                <h3 class="product-card__name">Chuột gaming không dây Logitech G304 Lightspeed Hero
+                                    12000DPI</h3>
+
+                                <div class="product-card__tags">
+                                    <span class="product-tag product-tag--outline">Rẻ Vô Địch</span>
+                                </div>
+
+                                <div class="product-card__footer">
+                                    <div class="product-card__price">
+                                        <span class="currency-symbol">₫</span>749.000
+                                    </div>
+                                    <div class="product-card__sold">Đã bán 9,4k</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                    </article>
+
+                    <!-- SẢN PHẨM 5 -->
+                    <article class="product-card">
+                        <a href="#" class="product-card__link">
+                            <div class="product-card__img-wrap">
+                                <img src="https://placehold.co/300x300/ff9800/ffffff?text=Gia+Do+Laptop"
+                                    alt="Giá đỡ Laptop nhôm" class="product-card__img">
+                            </div>
+
+                            <div class="product-card__favourite">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Yêu thích</span>
+                            </div>
+
+                            <div class="product-card__sale-off">
+                                <span class="product-card__sale-off-percent">-45%</span>
+                            </div>
+
+                            <div class="product-card__body">
+                                <h3 class="product-card__name">Giá đỡ Laptop Macbook hợp kim nhôm CNC cao cấp xoay 360
+                                    độ</h3>
+
+                                <div class="product-card__tags">
+                                    <span class="product-tag product-tag--fill">Giảm ₫15k</span>
+                                </div>
+
+                                <div class="product-card__footer">
+                                    <div class="product-card__price">
+                                        <span class="currency-symbol">₫</span>185.000
+                                    </div>
+                                    <div class="product-card__sold">Đã bán 3,1k</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                    </article>
+
+                    <!-- SẢN PHẨM 6 -->
+                    <article class="product-card">
+                        <a href="#" class="product-card__link">
+                            <div class="product-card__img-wrap">
+                                <img src="https://placehold.co/300x300/7b1fa2/ffffff?text=Tai+Nghe+Sony"
+                                    alt="Tai nghe chụp tai Sony" class="product-card__img">
+                            </div>
+
+                            <div class="product-card__favourite product-card__favourite--mall">
+                                <span>Mall</span>
+                            </div>
+
+                            <div class="product-card__sale-off">
+                                <span class="product-card__sale-off-percent">-20%</span>
+                            </div>
+
+                            <div class="product-card__body">
+                                <h3 class="product-card__name">Tai nghe Bluetooth chụp tai chống ồn chủ động Sony
+                                    WH-CH720N</h3>
+
+                                <div class="product-card__tags">
+                                    <span class="product-tag product-tag--outline">Freeship Xtra</span>
+                                </div>
+
+                                <div class="product-card__footer">
+                                    <div class="product-card__price">
+                                        <span class="currency-symbol">₫</span>1.990.000
+                                    </div>
+                                    <div class="product-card__sold">Đã bán 850</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card__find-similar">Tìm sản phẩm tương tự</a>
+                    </article>
+
+                </div>
+
+                <!-- 3. Nút "Xem thêm" ở cuối danh sách sản phẩm -->
+                <div class="daily-discover-more">
+                    <a href="#" class="btn daily-discover-more-btn">Xem thêm</a>
+                </div>
+
+            </section>
+
+
 
         </div>
 
@@ -415,10 +2000,329 @@
 
 
     <!-- 3. VÙNG CHÂN TRANG (FOOTER) -->
+    <!-- 3. VÙNG CHÂN TRANG ĐA TẦNG (SHOPEE MEGA FOOTER) -->
     <footer class="shopee-footer">
-        <p>© 2026 Shopee Clone. Dự án thực hành 100 bài học HTML & CSS.</p>
+
+        <!-- TẦNG 1: KHỐI 5 CỘT DANH MỤC HỖ TRỢ, THANH TOÁN & TẢI APP -->
+        <div class="footer-top">
+            <div class="grid-container">
+                <div class="footer-top-grid">
+
+                    <!-- CỘT 1: CHĂM SÓC KHÁCH HÀNG -->
+                    <div class="footer-col">
+                        <h3 class="footer-heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="#" class="footer-link">Trung Tâm Trợ Giúp</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Shopee Blog</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Shopee Mall</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Hướng Dẫn Mua Hàng</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Hướng Dẫn Bán Hàng</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Thanh Toán</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Shopee Xu</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Vận Chuyển</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Trả Hàng & Hoàn Tiền</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Chăm Sóc Khách Hàng</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Chính Sách Bảo Hành</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- CỘT 2: VỀ SHOPEE -->
+                    <div class="footer-col">
+                        <h3 class="footer-heading">VỀ SHOPEE</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="#" class="footer-link">Giới Thiệu Về Shopee Việt Nam</a>
+                            </li>
+                            <li class="footer-item"><a href="#" class="footer-link">Tuyển Dụng</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Điều Khoản Shopee</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Chính Sách Bảo Mật</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Chính Hãng</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Kênh Người Bán</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Flash Sales</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Chương Trình Tiếp Thị Liên Kết</a>
+                            </li>
+                            <li class="footer-item"><a href="#" class="footer-link">Liên Hệ Với Truyền Thông</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- CỘT 3: THANH TOÁN & ĐƠN VỊ VẬN CHUYỂN (Lưới Grid con 3 cột) -->
+                    <div class="footer-col">
+                        <h3 class="footer-heading">THANH TOÁN</h3>
+                        <ul class="footer-logo-grid">
+                            <li class="footer-logo-card"><span class="logo-text-visa">VISA</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-mc">MasterCard</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-jcb">JCB</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-amex">AMEX</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-cod">COD</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-spay">ShopeePay</span></li>
+                        </ul>
+
+                        <h3 class="footer-heading footer-heading--mt">ĐƠN VỊ VẬN CHUYỂN</h3>
+                        <ul class="footer-logo-grid">
+                            <li class="footer-logo-card"><span class="logo-text-spx">SPX</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-ghn">GHN</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-vt">ViettelPost</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-vnpost">VNPost</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-jt">J&T Express</span></li>
+                            <li class="footer-logo-card"><span class="logo-text-grab">GrabExpress</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- CỘT 4: THEO DÕI CHÚNG TÔI TRÊN -->
+                    <div class="footer-col">
+                        <h3 class="footer-heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-link footer-social-link">
+                                    <i class="footer-social-icon fa-brands fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link footer-social-link">
+                                    <i class="footer-social-icon fa-brands fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link footer-social-link">
+                                    <i class="footer-social-icon fa-brands fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CỘT 5: TẢI ỨNG DỤNG SHOPEE NGAY THÔI -->
+                    <div class="footer-col">
+                        <h3 class="footer-heading">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
+                        <div class="footer-download">
+                            <a href="#" class="footer-download-qr-link">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://shopee.vn"
+                                    alt="Download QR" class="footer-download-qr">
+                            </a>
+                            <div class="footer-download-apps">
+                                <a href="#" class="footer-download-app-btn">
+                                    <i class="fa-brands fa-apple"></i> <span>App Store</span>
+                                </a>
+                                <a href="#" class="footer-download-app-btn">
+                                    <i class="fa-brands fa-google-play"></i> <span>Google Play</span>
+                                </a>
+                                <a href="#" class="footer-download-app-btn">
+                                    <i class="fa-solid fa-bag-shopping"></i> <span>AppGallery</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Dải phân cách Bản quyền & Danh sách Quốc gia -->
+                <div class="footer-country-bar">
+                    <p class="footer-copyright-text">© 2026 Shopee. Tất cả các quyền được bảo lưu.</p>
+                    <div class="footer-country-list">
+                        <span>Quốc gia & Khu vực:</span>
+                        <a href="#">Singapore</a>
+                        <a href="#">Indonesia</a>
+                        <a href="#">Thái Lan</a>
+                        <a href="#">Malaysia</a>
+                        <a href="#">Việt Nam</a>
+                        <a href="#">Philippines</a>
+                        <a href="#">Brazil</a>
+                        <a href="#">México</a>
+                        <a href="#">Đài Loan</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TẦNG 2: THÔNG TIN PHÁP LÝ & BẢN QUYỀN DOANH NGHIỆP (Nền xám #f5f5f5) -->
+        <div class="footer-bottom">
+            <div class="grid-container">
+
+                <!-- Danh sách 4 Chính sách cốt lõi -->
+                <ul class="footer-policy-list">
+                    <li class="footer-policy-item"><a href="#">CHÍNH SÁCH BẢO MẬT</a></li>
+                    <li class="footer-policy-item"><a href="#">QUY CHẾ HOẠT ĐỘNG</a></li>
+                    <li class="footer-policy-item"><a href="#">CHÍNH SÁCH VẬN CHUYỂN</a></li>
+                    <li class="footer-policy-item"><a href="#">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a></li>
+                </ul>
+
+                <!-- Huy hiệu Đã đăng ký Bộ Công Thương -->
+                <div class="footer-cert-wrap">
+                    <div class="footer-cert-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>ĐÃ ĐĂNG KÝ BỘ CÔNG THƯƠNG</span>
+                    </div>
+                    <div class="footer-cert-badge">
+                        <i class="fa-solid fa-check-double"></i>
+                        <span>CHỨNG NHẬN AN TOÀN</span>
+                    </div>
+                </div>
+
+                <!-- Tên công ty & Địa chỉ pháp lý -->
+                <p class="footer-company-name">Công ty TNHH Shopee</p>
+                <div class="footer-company-info">
+                    <p>Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba
+                        Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn</p>
+                    <p>Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)
+                    </p>
+                    <p>Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</p>
+                    <p>© 2015 - Bản quyền thuộc về Công ty TNHH Shopee (Giao diện thực hành chuỗi 100 bài học HTML/CSS)
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
     </footer>
+
+
 
 </body>
 
 </html>
+
+
+
+<!-- 4. CỬA SỔ POPUP ĐĂNG KÝ / ĐĂNG NHẬP (AUTHENTICATION MODAL - CHƯƠNG 5) -->
+<!-- Công tắc 1 (Checkbox): Bật / Tắt toàn bộ cửa sổ Modal -->
+<input type="checkbox" id="modal-auth-toggle" class="modal-toggle-input">
+
+<!-- Công tắc 2 & 3 (Radio): Chuyển đổi qua lại giữa Tab Đăng Ký và Tab Đăng Nhập -->
+<input type="radio" name="auth-tab" id="auth-tab-register" class="auth-tab-input">
+<input type="radio" name="auth-tab" id="auth-tab-login" class="auth-tab-input" checked>
+
+<div class="modal">
+    <!-- Lớp màn đen Overlay (Click vào sẽ tắt Modal) -->
+    <label for="modal-auth-toggle" class="modal__overlay"></label>
+
+    <!-- Hộp thoại trắng trung tâm -->
+    <div class="modal__body">
+
+        <!-- ========================================== -->
+        <!-- MÀN HÌNH 1: FORM ĐĂNG KÝ (REGISTER FORM)   -->
+        <!-- ========================================== -->
+        <div class="auth-form auth-form--register">
+            <div class="auth-form__container">
+
+                <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng ký</h3>
+                    <!-- Bấm vào chữ "Đăng nhập" này sẽ kích hoạt Radio #auth-tab-login! -->
+                    <label for="auth-tab-login" class="auth-form__switch-btn">Đăng nhập</label>
+                </div>
+
+                <div class="auth-form__form">
+                    <div class="auth-form__group">
+                        <input type="text" class="auth-form__input" placeholder="Số điện thoại hoặc Email của bạn">
+                    </div>
+                    <div class="auth-form__group">
+                        <input type="password" class="auth-form__input"
+                            placeholder="Mật khẩu của bạn (Từ 8 - 16 ký tự)">
+                    </div>
+                    <div class="auth-form__group">
+                        <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                    </div>
+                </div>
+
+                <div class="auth-form__aside">
+                    <p class="auth-form__policy-text">
+                        Bằng việc đăng ký, bạn đã đồng ý với Shopee về
+                        <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                        <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>
+                    </p>
+                </div>
+
+                <div class="auth-form__controls">
+                    <label for="modal-auth-toggle" class="btn auth-form__controls-back">TRỞ LẠI</label>
+                    <button class="btn btn--primary">ĐĂNG KÝ</button>
+                </div>
+
+            </div>
+
+            <div class="auth-form__socials">
+                <a href="#" class="btn btn--with-icon auth-form__socials--facebook">
+                    <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                    <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                </a>
+                <a href="#" class="btn btn--with-icon auth-form__socials--google">
+                    <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                    <span class="auth-form__socials-title">Kết nối với Google</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- MÀN HÌNH 2: FORM ĐĂNG NHẬP (LOGIN FORM)    -->
+        <!-- ========================================== -->
+        <div class="auth-form auth-form--login">
+            <div class="auth-form__container">
+
+                <!-- Header Form Đăng Nhập: Có thêm cụm Mã QR Vàng đặc trưng! -->
+                <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng nhập</h3>
+
+                    <div class="auth-form__header-right">
+                        <!-- Cụm Nhãn vàng + Icon QR cắt vát chéo -->
+                        <div class="auth-form__qr-wrap">
+                            <div class="auth-form__qr-label">Đăng nhập với mã QR</div>
+                            <div class="auth-form__qr-icon" title="Quét mã QR">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                        </div>
+
+                        <!-- Bấm vào chữ "Đăng ký" này sẽ kích hoạt Radio #auth-tab-register! -->
+                        <label for="auth-tab-register" class="auth-form__switch-btn">Đăng ký</label>
+                    </div>
+                </div>
+
+                <!-- Form Đăng nhập chỉ có 2 ô Input: Tài khoản & Mật khẩu -->
+                <div class="auth-form__form">
+                    <div class="auth-form__group">
+                        <input type="text" class="auth-form__input" placeholder="Email / Số điện thoại / Tên đăng nhập">
+                    </div>
+                    <div class="auth-form__group">
+                        <input type="password" class="auth-form__input" placeholder="Mật khẩu">
+                    </div>
+                </div>
+
+                <!-- Khu vực Trợ giúp: Quên mật khẩu | Cần trợ giúp? -->
+                <div class="auth-form__aside">
+                    <div class="auth-form__help">
+                        <a href="#" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                        <span class="auth-form__help-separate"></span>
+                        <a href="#" class="auth-form__help-link">Cần trợ giúp?</a>
+                    </div>
+                </div>
+
+                <!-- Cụm nút điều khiển: TRỞ LẠI & ĐĂNG NHẬP -->
+                <div class="auth-form__controls">
+                    <label for="modal-auth-toggle" class="btn auth-form__controls-back">TRỞ LẠI</label>
+                    <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                </div>
+
+            </div>
+
+            <!-- Chân Form Đăng nhập: SMS, Facebook & Google -->
+            <div class="auth-form__socials">
+                <a href="#" class="btn btn--with-icon auth-form__socials--sms">
+                    <i class="auth-form__socials-icon fa-solid fa-comment-sms"></i>
+                    <span class="auth-form__socials-title">SMS</span>
+                </a>
+                <a href="#" class="btn btn--with-icon auth-form__socials--facebook">
+                    <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                    <span class="auth-form__socials-title">Facebook</span>
+                </a>
+                <a href="#" class="btn btn--with-icon auth-form__socials--google">
+                    <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                    <span class="auth-form__socials-title">Google</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
